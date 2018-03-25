@@ -34,25 +34,24 @@
 .navigationSlider .slidingNav ul li.siteNavGroupActive a {
   background: #4a148c;
 }
+
 .button {
   border: 1px solid #fff;
   border-radius: 0px;
   color: #fff;
 }
+
 .button:hover {
   background: #fff;
   color: #4a148c;
 }
+
 .projectTitle {
   color: #fff;
 }
 
-/* container.paddingBottom.paddingTop {
+.container lightBackground {
   background: #ece7f3;
-} */
-
-.container lightBackground{
-    background: #ece7f3;
 }
 
 .homeSplashFade {
@@ -60,14 +59,20 @@
   background-size: inherit;
   background-repeat: no-repeat;
 }
+
 #footer.nav-footer {
   color: #fff;
   background: #4a148c;
 }
+
 .imageAlignTop .blockImage {
-    max-width: 130px;
+  max-width: 130px;
+}
+.container .wrapper .imageAlignSide p {
+  text-align: left;
+  color: black;
+}
 
-
-.container.darkBackground {
-        background: #8F8A96;
-    }
+.darkBackground {
+  background: #d6d6d6;
+}

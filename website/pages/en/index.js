@@ -101,14 +101,14 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'Energistically whiteboard functionalized ROI after backward-compatible quality vectors. Holisticly incubate web-enabled quality vectors and real-time process improvements. Monotonectally e-enable future-proof paradigms before error-free vortals',
-        image: imgUrl('microkubes-logo.svg'),
+        content: 'The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.',
+        image: imgUrl('reliability.png'),
         imageAlign: 'top',
         title: 'High scalability and reliability',
       },
       {
-        content: 'Proactively reintermediate visionary e-tailers whereas virtual collaboration and idea-sharing. Dynamically communicate focused internal or "organic" sources with one-to-one infrastructures. Efficiently transition backend experiences without exceptional best practices',
-        image: imgUrl('microkubes-logo.svg'),
+        content: 'Our integrated user management ensures integrity of data by using OAuth2, JWT and SAML for user authentication and authorization. It increases security by eliminating the risk of passwords theft or reuse.',
+        image: imgUrl('user-management.png'),
         imageAlign: 'top',
         title: 'Integrated user management',
       },
@@ -120,8 +120,9 @@ const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
+    
     <h2>Out-of-the-box complete microservices</h2>
-    <MarkdownBlock>Distinctively formulate world-class resources without customized deliverables. Enthusiastically simplify B2B metrics before competitive materials. Progressively build customized processes after low-risk high-yield channels.</MarkdownBlock>
+    <MarkdownBlock>Microkubes is built to maximize developers` happiness. It works on any cloud, is easy to set up and simple to use at any scale. It provides a completely integrated open source Microservices framework, which works out of the box on Kubernetes. The framework is easy to use, can be deployed on any infrastructure and it is 100% open source.</MarkdownBlock>
   </div>
 );
 
@@ -142,10 +143,10 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: 'Talk about trying this out',
+        content: 'It is easy and quick to get started with Microkubes.',
         image: imgUrl('microkubes-logo.svg'),
         imageAlign: 'left',
-        title: 'Try it Out',
+        title: 'Check out the demo',
       },
     ]}
   </Block>
@@ -155,7 +156,7 @@ const Description = props => (
   <Block background="dark">
     {[
       {
-        content: 'This is another description of how this project is useful',
+        content: 'Microkubes is an open source framework, for building data management platforms by using microservices.It is based on proven technologies, that are in production in some of the most demanding applications. Microkubes’ open source framework helps you to develop projects faster and easier than ever before',
         image: imgUrl('microkubes-logo.svg'),
         imageAlign: 'right',
         title: 'Description',
@@ -204,7 +205,6 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <FeatureCallout />
-          <LearnHow />
           <TryOut />
           <Description />
           <Showcase language={language} />
