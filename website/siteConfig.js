@@ -16,7 +16,7 @@ const siteConfig = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'microkubes',
   headerLinks: [
-    {doc: 'introduction-to-microkubes', label: 'Docs'},
+    {doc: 'installation-and-setup', label: 'Docs'},
     {page: 'help', label: 'Support'},
     {page: 'about', label: 'About'},
 		{
