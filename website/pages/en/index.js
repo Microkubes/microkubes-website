@@ -76,13 +76,11 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Example Link</Button>
-            <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
+            <Button href="about.html">Learn More</Button>
+            
           </PromoSection>
         </div>
       </SplashContainer>
@@ -103,16 +101,16 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Energistically whiteboard functionalized ROI after backward-compatible quality vectors. Holisticly incubate web-enabled quality vectors and real-time process improvements. Monotonectally e-enable future-proof paradigms before error-free vortals',
+        image: imgUrl('microkubes-logo.svg'),
         imageAlign: 'top',
-        title: 'Feature One',
+        title: 'High scalability and reliability',
       },
       {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Proactively reintermediate visionary e-tailers whereas virtual collaboration and idea-sharing. Dynamically communicate focused internal or "organic" sources with one-to-one infrastructures. Efficiently transition backend experiences without exceptional best practices',
+        image: imgUrl('microkubes-logo.svg'),
         imageAlign: 'top',
-        title: 'Feature Two',
+        title: 'Integrated user management',
       },
     ]}
   </Block>
@@ -122,8 +120,8 @@ const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
+    <h2>Out-of-the-box complete microservices</h2>
+    <MarkdownBlock>Distinctively formulate world-class resources without customized deliverables. Enthusiastically simplify B2B metrics before competitive materials. Progressively build customized processes after low-risk high-yield channels.</MarkdownBlock>
   </div>
 );
 
@@ -132,7 +130,7 @@ const LearnHow = props => (
     {[
       {
         content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('microkubes-logo.svg'),
         imageAlign: 'right',
         title: 'Learn How',
       },
@@ -145,7 +143,7 @@ const TryOut = props => (
     {[
       {
         content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('microkubes-logo.svg'),
         imageAlign: 'left',
         title: 'Try it Out',
       },
@@ -158,7 +156,7 @@ const Description = props => (
     {[
       {
         content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('microkubes-logo.svg'),
         imageAlign: 'right',
         title: 'Description',
       },

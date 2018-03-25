@@ -14,3 +14,60 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.homeContainer {
+  background: #4a148c;
+  color: rgb(255, 255, 255);
+}
+
+.fixedHeaderContainer {
+  background: rgb(255, 255, 255);
+}
+
+.navigationSlider .slidingNav ul li a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.navigationSlider .slidingNav ul li a:focus,
+.navigationSlider .slidingNav ul li a:hover,
+.navigationSlider .slidingNav ul li.siteNavItemActive a,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
+  background: #4a148c;
+}
+.button {
+  border: 1px solid #fff;
+  border-radius: 0px;
+  color: #fff;
+}
+.button:hover {
+  background: #fff;
+  color: #4a148c;
+}
+.projectTitle {
+  color: #fff;
+}
+
+/* container.paddingBottom.paddingTop {
+  background: #ece7f3;
+} */
+
+.container lightBackground{
+    background: #ece7f3;
+}
+
+.homeSplashFade {
+  background-image: url(/img/watermark.png);
+  background-size: inherit;
+  background-repeat: no-repeat;
+}
+#footer.nav-footer {
+  color: #fff;
+  background: #4a148c;
+}
+.imageAlignTop .blockImage {
+    max-width: 130px;
+
+
+.container.darkBackground {
+        background: #8F8A96;
+    }

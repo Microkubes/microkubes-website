@@ -3,12 +3,13 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A microservice framework",
+    "tagline": "Scalable, ready to use microservice framework",
     "introduction-to-microkubes": "Introduction to Microkubes",
     "Docs": "Docs",
     "Support": "Support",
+    "About": "About",
     "GitHub": "GitHub",
-    "Docusaurus": "Docusaurus",
+    "Microkubes": "Microkubes",
     "First Category": "First Category",
     "Second Category": "Second Category"
   },

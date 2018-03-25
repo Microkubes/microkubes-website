@@ -11,13 +11,14 @@ const users = [
 
 const siteConfig = {
   title: 'Microkubes' /* title for your website */,
-  tagline: 'A microservice framework',
+  tagline: 'Scalable, ready to use microservice framework',
   url: 'https://www.microkubes.com' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   projectName: 'microkubes',
   headerLinks: [
     {doc: 'introduction-to-microkubes', label: 'Docs'},
     {page: 'help', label: 'Support'},
+    {page: 'about', label: 'About'},
 		{
       href: 'https://github.com/microkubes/microkubes',
       label: 'GitHub',
@@ -25,13 +26,13 @@ const siteConfig = {
   ],
   users,
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
+  headerIcon: 'img/microkubes-logo.svg',
+  footerIcon: 'img/microkubes-logo.svg',
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
-    primaryColor: '#2E8555',
-    secondaryColor: '#205C3B',
+    primaryColor: '#4A148C',
+    secondaryColor: '#4A148C',
   },
   /* custom fonts for website */
   /*fonts: {
