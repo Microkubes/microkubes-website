@@ -4,14 +4,25 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Scalable, ready to use microservice framework",
-    "installation-and-setup": "Installation and Setup",
-    "Docs": "Docs",
-    "Support": "Support",
-    "About": "About",
-    "GitHub": "GitHub",
-    "Microkubes": "Microkubes",
-    "First Category": "First Category",
-    "Second Category": "Second Category"
+    "docs": {
+      "Introduction-GettingStarted": {
+        "title": "Introduction-GettingStarted"
+      },
+      "installation-and-setup": {
+        "title": "Get Started with Microkubes"
+      }
+    },
+    "links": {
+      "Docs": "Docs",
+      "Support": "Support",
+      "About": "About",
+      "GitHub": "GitHub"
+    },
+    "categories": {
+      "Microkubes": "Microkubes",
+      "First Category": "First Category",
+      "Second Category": "Second Category"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

@@ -20,7 +20,7 @@ const siteConfig = {
     {page: 'help', label: 'Support'},
     {page: 'about', label: 'About'},
 		{
-      href: 'https://github.com/microkubes/microkubes',
+      href: 'https://github.com/Microkubes/microkubes',
       label: 'GitHub',
     },
   ],
