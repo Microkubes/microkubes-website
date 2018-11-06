@@ -1,10 +1,16 @@
 {
   "docs": {
-    "Microkubes": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Get Started with Microkubes": ["installation-and-setup"],
+    "Microkubes Manual": [
+      "introduction",
+      "installation",
+      "external-services",
+      "configuration",
+      "self-registration",
+      "security",
+      "backends",
+      "deployments",
+      "ci-cd"
+    ]
   }
 }
