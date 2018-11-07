@@ -5,11 +5,35 @@
     "previous": "Previous",
     "tagline": "Scalable, ready to use microservice framework",
     "docs": {
-      "Introduction-GettingStarted": {
-        "title": "Introduction-GettingStarted"
+      "backends": {
+        "title": "Backends"
+      },
+      "ci-cd": {
+        "title": "CI, CD, Code Quality"
+      },
+      "configuration": {
+        "title": "Configuration"
+      },
+      "deployments": {
+        "title": "Deployments"
+      },
+      "external-services": {
+        "title": "External Services"
+      },
+      "installation": {
+        "title": "Installation"
       },
       "installation-and-setup": {
         "title": "Get Started with Microkubes"
+      },
+      "introduction": {
+        "title": "Introduction"
+      },
+      "security": {
+        "title": "Security"
+      },
+      "self-registration": {
+        "title": "Self Registration on Kong"
       }
     },
     "links": {
@@ -19,9 +43,8 @@
       "GitHub": "GitHub"
     },
     "categories": {
-      "Microkubes": "Microkubes",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Get Started with Microkubes": "Get Started with Microkubes",
+      "Microkubes Manual": "Microkubes Manual"
     }
   },
   "pages-strings": {

@@ -12,7 +12,7 @@ Before running Microkubes, you need to install some prerequisites first.
 
 ## Prerequisite for Microkubes
 
-You need Docker and Kubernetes running on your machine. 
+You need Docker and Kubernetes running on your machine.
 
 If you don't have Docker installed on your machine please follow these instructions [Docker Installation](https://docs.docker.com/install/).
 
@@ -49,7 +49,7 @@ kubectl create -f kubernetes/manifests/serviceaccount.yaml
 ```
 
 4. Create a secret from keys generated in Step 2
- 
+
 ```bash
 kubectl -n microkubes create secret generic microkubes-secrets \
 	--from-file=keys/default \
@@ -70,7 +70,7 @@ kubectl -n microkubes create secret generic mongo-init-db \
 ```
 
 ### Deploy Microkubes
-
+your first microservice
 Run the following commands:
 ```bash
 cd kubernetes/manifests
