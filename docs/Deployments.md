@@ -3,7 +3,7 @@ id: deployments
 title: Deployments
 ---
 
-[Microkubes](https://github.com/Microkubes/microkubes) supports Kubernetes and Docker Swarm deployments. It works on any cloud, is easy to set up and simple to use at any scale. It provides a completely integrated open source Microservices framework, which works out of the box on Kubernetes and Swarm. The framework is easy to use, can be deployed on any infrastructure.
+[Microkubes](https://github.com/Microkubes/microkubes) supports [Kubernetes](https://kubernetes.io/) and [Docker Swarm](https://docs.docker.com/engine/swarm/) deployments. It works on any cloud, is easy to set up and simple to use at any scale. It provides a completely integrated open source Microservices framework, which works out of the box on Kubernetes and Swarm. The framework is easy to use, can be deployed on any infrastructure.
 
 Each microservice has its own Dockerfile. We use multi-stage build in order reduce the size of the image. The base image for building the microservices is the ```goa-build``` image. It contains the all dependencies needed for the platform which speed up the build process. Microkubes use the ```alpine:3.7``` image for running the microservices.
 
@@ -96,13 +96,19 @@ First make sure your node is swarm manager. If not, initialize a swarm first:
 docker swarm init
 ```
 
-Then generate the keys - see ```generate-keys.sh``` script in the ```keys``` directory.
+Then generate the keys:
+
+```bash
+cd keys
+./generate-keys.sh
+```
 
 Once you have the keys in the ```keys``` directory, run the script to build all Microkubes docker
 images:
 
 ```bash
-./generate-keys.sh build latest
+cd ..
+./build-docker-images.sh <build_directory> [<images_tag>]
 ```
 
 This would build all Microkubes images (may take a while) in the ```build``` directory.
