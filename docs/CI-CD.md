@@ -9,7 +9,7 @@ For all changes in the platform PR must be creating. On merging the PR to `maste
 * Install the microservice
 * Run tests
 * Build new image
-* Push the image on [docker hub](https://hub.docker.com/)
+* Push the image on [docker hub](https://hub.docker.com/) automatically
 
 The usual .travis.yaml file:
 
