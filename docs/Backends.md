@@ -7,7 +7,7 @@ Microkubes platform supports multiple backends. So far it supports [MongoDB](htt
 
 Microkubes has its own ```Golang Package``` for supporting multiple backends. There is not equivalent library in Python for this purpose. The package is easy to use and set up. The backend is determined by the configuration properties. When some microservice is using backends package it does not care about the backend it uses. It always calls same interface methods.
 
-Backend is set up at start up of the services. It initialize the backend service base of the configuration provided. The package builds the backend service and returns it to the microservice fot the later use.
+Backend is set up at start up of the services. It initialize the backend service base of the configuration provided. The package builds the backend service and returns it to the microservice for the later use.
 
 Under the hood we are using [mgo](https://gopkg.in/mgo.v2) and [dynamo](https://github.com/guregu/dynamo) packages for MongoDB and DynamoDB database operations appropriately. The packages are still under development, so the API may change rarely. However, breaking changes will be avoided and the API can be considered relatively stable.
 
@@ -89,8 +89,8 @@ The service loads the configuration from a JSON file. Here's an example of a JSO
         "awsRegion": "us-east-1",
         "host": "mongo:27017",
         "database": "database-name",
-        "user": "restapi",
-        "pass": "restapi"
+        "user": "username",
+        "pass": "password"
         }
     }
 }
