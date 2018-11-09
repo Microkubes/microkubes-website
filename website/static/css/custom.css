@@ -1,12 +1,17 @@
 /* your custom css */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+  
 }
 
 @media only screen and (min-width: 1024px) {
 }
 
 @media only screen and (max-width: 1023px) {
+  .navigationWrapper.navigationSlider .slidingNav ul li a {
+    color: white;
+  }
+
 }
 
 @media only screen and (min-width: 1400px) {
@@ -20,13 +25,41 @@
   color: rgb(255, 255, 255);
 }
 
-.fixedHeaderContainer {
-  background: rgb(255, 255, 255);
+.fixedHeaderContainer header .headerTitleWithLogo {
+  display: none;
+}
+.gridBlock .fourByGridBlock {
+  flex: 1 0 20%;
+  background-color: #fff;
+  padding: 3rem 6rem 3rem 6rem;
+  box-shadow: -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
+}
+.container.paddingBottom.paddingTop{
+  background-color: rgba(146, 114, 186, 0.08);
+  border-bottom: 1px solid rgba(146, 114, 186, 0.2);
 }
 
-.navigationSlider .slidingNav ul li a {
-  color: rgba(0, 0, 0, 0.8);
+#try.container.paddingBottom.paddingTop{
+  background-color: rgb(94, 84, 107);
+  border-bottom: 1px solid rgba(146, 114, 186, 0.2);
 }
+
+.fixedHeaderContainer {
+  background: rgb(255, 255, 255);
+  box-shadow: -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
+}
+.productShowcaseSection.paddingBottom {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+ .navigationSlider .slidingNav ul li a {
+  color: rgba(0, 0, 0, 0.8);
+} 
 
 .navigationSlider .slidingNav ul li a:focus,
 .navigationSlider .slidingNav ul li a:hover,
@@ -58,21 +91,41 @@
   background-image: url(/img/watermark.png);
   background-size: inherit;
   background-repeat: no-repeat;
+  min-height: 330px;
+  padding-top: 2%;
+}
+.mainContainer .wrapper .post .postHeader {
+  padding-top: 30px;
+}
+.mainContainer {
+   padding: 0px;
 }
 
 #footer.nav-footer {
   color: #fff;
   background: #4a148c;
+  
+}
+.docMainWrapper .wrapper {
+  padding-top: 30px;
+}
+.nav-footer .copyright {
+  margin-top: 8rem;
+  border-top: 1px solid #9272ba;
+  padding-top: 1rem;
 }
 
 .imageAlignTop .blockImage {
-  max-width: 130px;
+  max-width: 100px;
 }
 .container .wrapper .imageAlignSide p {
   text-align: left;
   color: black;
 }
 
-.darkBackground {
-  background: #d6d6d6;
+.container.darkBackground.paddingBottom.paddingTop{
+  background: rgba(123, 114, 134, 0.85);
+}
+.container .wrapper .imageAlignSide p {
+  color: white;
 }
