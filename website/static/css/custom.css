@@ -157,6 +157,10 @@ body {
   padding-top: 1rem;
 }
 
+.copyright a{
+  color: inherit;
+}
+
 .imageAlignTop .blockImage {
   max-width: 100px;
 }
