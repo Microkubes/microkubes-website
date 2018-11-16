@@ -39,8 +39,8 @@
   }
 }
 
-.body {
-  font-family: $myFont;
+body {
+  font-family: $default;
 }
 
 .homeContainer {
@@ -165,4 +165,5 @@
   letter-spacing: 0.5px;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-top: 1rem;
 }
