@@ -35,17 +35,13 @@ class Footer extends React.Component {
           <div>
             <h5>Community</h5>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="http://stackoverflow.com/questions/tagged/microkubes"
               target="_blank">
               Stack Overflow
             </a>
-            <a href="https://twitter.com/" target="_blank">
-              Twitter
-            </a>
           </div>
           <div>
-            <h5>More</h5>
-            <a href="https://github.com/">GitHub</a>
+            <h5>Social</h5>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
@@ -56,10 +52,19 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               Star
             </a>
+            {this.props.config.twitterUsername && (
+            <div className="social">
+              <a
+                href={`https://twitter.com/${this.props.config.twitterUsername}`}
+                className="twitter-follow-button">
+                Follow @{this.props.config.twitterUsername}
+              </a>
+            </div>
+            )}
           </div>
         </section>
         <section className="copyright">
-          Copyright &copy; {currentYear} Keitaro Inc.
+          Copyright &copy; {currentYear} <a href="https://www.keitaro.com/">Keitaro Inc.</a>
         </section>
       </footer>
     );
