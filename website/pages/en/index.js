@@ -78,9 +78,6 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <ProjectTitle />
-          <PromoSection>
-            <Button href="about.html">Learn More</Button>
-          </PromoSection>
         </div>
       </SplashContainer>
     );
@@ -105,32 +102,60 @@ const Features = props => (
           "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
         image: imgUrl("reliability.png"),
         imageAlign: "top",
-        title: "High scalability and reliability"
+        title: "High Scalability and Reliability"
       },
       {
         content:
           "Our integrated user management ensures integrity of data by using OAuth2, JWT and SAML for user authentication and authorization. It increases security by eliminating the risk of passwords theft or reuse.",
         image: imgUrl("user-management.png"),
         imageAlign: "top",
-        title: "Integrated user management"
+        title: "Integrated User Management"
       }
     ]}
   </Block>
 );
-
 const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{ textAlign: "center" }}
   >
-    <h1>OUT-OF-THE-BOX COMPLETE MICROSERVICES</h1>
-    <MarkdownBlock>
+    <h1 className="section-title">Out-Of-Box Complete Microservices</h1>
+    <MarkdownBlock className="section-desc">
       Microkubes is built to maximize developers` happiness. It works on any
       cloud, is easy to set up and simple to use at any scale. It provides a
       completely integrated open source Microservices framework, which works out
       of the box on Kubernetes. The framework is easy to use, can be deployed on
       any infrastructure and it is 100% open source.
     </MarkdownBlock>
+    <PromoSection>
+      <Button className="buton-dark" href="/docs/installation-and-setup.html">
+        Get Started
+      </Button>
+    </PromoSection>
+  </div>
+);
+
+const FeatureCalloutDownload = props => (
+  <div
+    className="productShowcaseSection paddingBottom downloadSection"
+    style={{ textAlign: "center" }}
+  >
+    <h1 className="section-title">About The Framework</h1>
+    <MarkdownBlock className="section-desc">
+      Microkubes is an open source framework, for building data management
+      platforms by using microservices.It is based on proven technologies, that
+      are in production in some of the most demanding applications. Microkubes’
+      open source framework helps you to develop projects faster and easier than
+      ever before
+    </MarkdownBlock>
+    <PromoSection>
+      <Button
+        className="buton-dark"
+        href="https://github.com/Microkubes/microkubes"
+      >
+        Download now
+      </Button>
+    </PromoSection>
   </div>
 );
 
@@ -142,33 +167,6 @@ const LearnHow = props => (
         image: imgUrl("microkubes-logo.svg"),
         imageAlign: "right",
         title: "Learn How"
-      }
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: "It is easy and quick to get started with Microkubes.",
-        image: imgUrl("cube_demo.png"),
-        imageAlign: "left",
-        title: "Check out the demo"
-      }
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content:
-          "Microkubes is an open source framework, for building data management platforms by using microservices.It is based on proven technologies, that are in production in some of the most demanding applications. Microkubes’ open source framework helps you to develop projects faster and easier than ever before",
-        image: imgUrl("cube_description.png"),
-        imageAlign: "right",
-        title: "Description"
       }
     ]}
   </Block>
@@ -212,10 +210,9 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Features />
           <FeatureCallout />
-          <TryOut />
-          <Description />
+          <Features />
+          <FeatureCalloutDownload />
           <Showcase language={language} />
         </div>
       </div>

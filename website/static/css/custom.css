@@ -1,7 +1,6 @@
 /* your custom css */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
-  
 }
 
 @media only screen and (min-width: 1024px) {
@@ -9,108 +8,151 @@
 
 @media only screen and (max-width: 1023px) {
   .navigationWrapper.navigationSlider .slidingNav ul li a {
-    color: white;
+    color: #fff;
+  }
+  .fixedHeaderContainer .logo {
+    height: 110%;
   }
 
+  .fixedHeaderContainer {
+    padding: 0px;
+  }
+  .navPusher .homeContainer .homeSplashFade {
+    background-size: initial;
+    min-height: 40rem;
+  }
+  .wrapper .gridBlock .fourByGridBlock {
+    padding: 4rem 1rem 4rem 1rem;
+  }
+  .navPusher .nav-footer .sitemap {
+    margin: 2% 0 0 20%;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (max-width: 1500px) {
+  .homeContainer .homeSplashFade {
+    background-size: 95vw;
+    min-height: 35rem;
+  }
+}
+
+.body {
+  font-family: $myFont;
 }
 
 .homeContainer {
   background: #4a148c;
-  color: rgb(255, 255, 255);
+  color: #fff;
+}
+.wrapper {
+  padding: 10px 20px;
 }
 
-.fixedHeaderContainer header .headerTitleWithLogo {
-  display: none;
+.fixedHeaderContainer header img {
+  height: 140%;
 }
+.container.paddingTop {
+  padding-top: 0;
+}
+
 .gridBlock .fourByGridBlock {
   flex: 1 0 20%;
   background-color: #fff;
-  padding: 3rem 6rem 3rem 6rem;
-  box-shadow: -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
-}
-.container.paddingBottom.paddingTop{
-  background-color: rgba(146, 114, 186, 0.08);
-  border-bottom: 1px solid rgba(146, 114, 186, 0.2);
-}
-
-#try.container.paddingBottom.paddingTop{
-  background-color: rgb(94, 84, 107);
-  border-bottom: 1px solid rgba(146, 114, 186, 0.2);
+  padding: 4rem 6rem 3rem 6rem;
+  -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
+  background-size: 35px;
 }
 
 .fixedHeaderContainer {
-  background: rgb(255, 255, 255);
-  box-shadow: -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.1);
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
 }
 .productShowcaseSection.paddingBottom {
   padding-bottom: 80px;
   padding-top: 80px;
 }
+.downloadSection {
+  background-color: #f5f5f5;
+}
+.productShowcaseSection p {
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: 1.2rem;
+}
+.wrapper .navigationWrapper.navigationSlider .slidingNav ul li:last-child a {
+  border: 1.5px solid #4a148c;
+  padding: 0rem 1rem;
+  font-weight: 500;
+}
 
- .navigationSlider .slidingNav ul li a {
-  color: rgba(0, 0, 0, 0.8);
-} 
+.navigationSlider .slidingNav ul li a {
+  color: #4a148c;
+  font-weight: 500;
+  padding: 1rem;
+}
 
 .navigationSlider .slidingNav ul li a:focus,
-.navigationSlider .slidingNav ul li a:hover,
-.navigationSlider .slidingNav ul li.siteNavItemActive a,
-.navigationSlider .slidingNav ul li.siteNavGroupActive a {
+.navigationSlider .slidingNav ul li a:hover {
   background: #4a148c;
+  font-weight: 500;
 }
 
 .button {
   border: 1px solid #fff;
   border-radius: 0px;
   color: #fff;
+  background-color: #4a148c;
+  padding: 1rem 2.5rem;
+  font-size: initial;
 }
 
-.button:hover {
+.button:hover,
+.button:focus,
+.button:active {
   background: #fff;
   color: #4a148c;
+  border: 1px solid #4a148c;
 }
 
 .projectTitle {
   color: #fff;
 }
 
-.container lightBackground {
-  background: #ece7f3;
-}
-
 .homeSplashFade {
-  background-image: url(/img/watermark.png);
-  background-size: inherit;
+  background-image: url(/img/illustration.png);
   background-repeat: no-repeat;
-  min-height: 330px;
-  padding-top: 2%;
+  min-height: 45rem;
+  padding-top: 3%;
+  background-position: center 73%;
+  background-size: initial;
 }
 .mainContainer .wrapper .post .postHeader {
   padding-top: 30px;
 }
 .mainContainer {
-   padding: 0px;
+  padding: 0px;
 }
 
 #footer.nav-footer {
   color: #fff;
   background: #4a148c;
-  
+}
+
+.nav-footer .sitemap {
+  margin: 2% 0 0 30%;
 }
 .docMainWrapper .wrapper {
   padding-top: 30px;
 }
 .nav-footer .copyright {
-  margin-top: 8rem;
+  margin-top: 4rem;
   border-top: 1px solid #9272ba;
   padding-top: 1rem;
 }
@@ -118,14 +160,9 @@
 .imageAlignTop .blockImage {
   max-width: 100px;
 }
-.container .wrapper .imageAlignSide p {
-  text-align: left;
-  color: black;
-}
-
-.container.darkBackground.paddingBottom.paddingTop{
-  background: rgba(123, 114, 134, 0.85);
-}
-.container .wrapper .imageAlignSide p {
-  color: white;
+.section-title {
+  color: #4a148c;
+  letter-spacing: 0.5px;
+  font-size: 2.5rem;
+  font-weight: 700;
 }

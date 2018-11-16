@@ -32,7 +32,7 @@ const siteConfig = {
     { page: "about", label: "About" },
     {
       href: "https://github.com/Microkubes/microkubes",
-      label: "GitHub"
+      label: "Download"
     }
   ],
   users,
@@ -46,16 +46,10 @@ const siteConfig = {
     secondaryColor: "#4A148C"
   },
   /* custom fonts for website */
-  /*fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },*/
+  fonts: {
+    myFont: ["Verdana", "Arial", "sans-serif"],
+    myOtherFont: ["-apple-system", "system-ui"]
+  },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: "Copyright © " + new Date().getFullYear() + " Keitaro Inc",
   // organizationName: 'deltice', // or set an env variable ORGANIZATION_NAME
