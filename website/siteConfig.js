@@ -14,9 +14,10 @@ const siteConfig = {
   url: "https://www.microkubes.com" /* your website url */,
   baseUrl: "/" /* base url for your project */,
   projectName: "microkubes",
-  organizationName: 'Microkubes',
+  organizationName: "Microkubes",
   twitter: true,
-  twitterUsername: 'Microkubes',
+  twitterUsername: "Microkubes",
+  cname: "www.microkubes.com",
   headerLinks: [
     {
       doc: "ci-cd",
@@ -53,7 +54,7 @@ const siteConfig = {
     default: ["futura-pt", "-apple-system", "system-ui"]
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright: "Copyright © " + new Date().getFullYear() + " Keitaro Inc",
+  copyright: "Copyright &copy; " + new Date().getFullYear() + " Keitaro Inc",
   // organizationName: 'deltice', // or set an env variable ORGANIZATION_NAME
   // projectName: 'test-site', // or set an env variable PROJECT_NAME
   highlight: {
