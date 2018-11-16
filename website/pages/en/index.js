@@ -151,7 +151,7 @@ const FeatureCalloutDownload = props => (
     <PromoSection>
       <Button
         className="buton-dark"
-        href="https://github.com/Microkubes/microkubes"
+        href="https://github.com/Microkubes/microkubes/releases"
       >
         Download now
       </Button>
