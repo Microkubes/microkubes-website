@@ -47,8 +47,7 @@ const siteConfig = {
   },
   /* custom fonts for website */
   fonts: {
-    myFont: ["Verdana", "Arial", "sans-serif"],
-    myOtherFont: ["-apple-system", "system-ui"]
+    default: ["futura-pt", "-apple-system", "system-ui"]
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: "Copyright © " + new Date().getFullYear() + " Keitaro Inc",
@@ -59,6 +58,7 @@ const siteConfig = {
     theme: "default"
   },
   scripts: ["https://buttons.github.io/buttons.js"],
+  stylesheets: ['https://use.typekit.net/eaz5jri.css'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: "https://github.com/facebook/test-site"
   /* On page navigation for the current documentation page */
