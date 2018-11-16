@@ -14,6 +14,7 @@ const siteConfig = {
   url: "https://www.microkubes.com" /* your website url */,
   baseUrl: "/" /* base url for your project */,
   projectName: "microkubes",
+  organizationName: 'Microkubes',
   headerLinks: [
     {
       doc: "ci-cd",
