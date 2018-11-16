@@ -17,6 +17,11 @@
   .fixedHeaderContainer {
     padding: 0px;
   }
+
+  .navPusher{
+    overflow: hidden;
+  }
+
   .navPusher .homeContainer .homeSplashFade {
     background-size: initial;
     min-height: 40rem;
