@@ -18,12 +18,12 @@ class Help extends React.Component {
     const supportLinks = [
       {
         content:
-          "Learn more using the [documentation on this site.](/test-site/docs/en/doc1.html)",
+          "Learn more using the [documentation on this site.](/docs/introduction.html)",
         title: "Browse Docs"
       },
       {
         content:
-          "Ask questions about the [documentation and project](https://github.com/Microkubes/microkubes.github.io)",
+          "Ask questions about the [documentation and project](https://github.com/Microkubes/microkubes)",
         title: "Join the community"
       }
     ];
