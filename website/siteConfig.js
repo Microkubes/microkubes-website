@@ -15,6 +15,8 @@ const siteConfig = {
   baseUrl: "/" /* base url for your project */,
   projectName: "microkubes",
   organizationName: 'Microkubes',
+  twitter: true,
+  twitterUsername: 'Microkubes',
   headerLinks: [
     {
       doc: "ci-cd",
@@ -32,7 +34,7 @@ const siteConfig = {
     { page: "help", label: "Support" },
     { page: "about", label: "About" },
     {
-      href: "https://github.com/Microkubes/microkubes",
+      href: "https://github.com/Microkubes/microkubes/releases",
       label: "Download"
     }
   ],
@@ -61,7 +63,7 @@ const siteConfig = {
   scripts: ["https://buttons.github.io/buttons.js"],
   stylesheets: ['https://use.typekit.net/eaz5jri.css'],
   // You may provide arbitrary config keys to be used as needed by your template.
-  repoUrl: "https://github.com/facebook/test-site"
+  repoUrl: "https://github.com/Microkubes/microkubes"
   /* On page navigation for the current documentation page */
   // onPageNav: 'separate',
 };
