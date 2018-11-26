@@ -121,7 +121,7 @@ We're going to implement a simple "hello world" action in Flask.
 When running the microservice inside the platform, we need to register it to the API Gateway.
 To do this, we use Microkubes own Python [library](https://github.com/Microkubes/microkubes-python).
 
-Edit ```setup.py``` and put:
+Edit ```service.py``` and put:
 
 ```python
 
@@ -157,8 +157,12 @@ Edit the ```Dockerfile``` and put:
 ```Dockerfile
 FROM python:3.7-slim-stretch
 
+# Install git
+RUN apt-get update && apt-get install -y git
+
 # Install microkubes-python
 RUN pip install "git+https://github.com/Microkubes/microkubes-python#egg=microkubes-python"
+
 # Install flask
 RUN pip install Flask
 
