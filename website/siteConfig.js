@@ -10,7 +10,7 @@ const users = [];
 
 const siteConfig = {
   title: "Microkubes" /* title for your website */,
-  tagline: "Scalable, ready to use microservice framework",
+  tagline: "Scalable, Ready For Use Microservice Framework",
   url: "https://www.microkubes.com" /* your website url */,
   baseUrl: "/" /* base url for your project */,
   projectName: "microkubes",
@@ -62,7 +62,7 @@ const siteConfig = {
     theme: "default"
   },
   scripts: ["https://buttons.github.io/buttons.js"],
-  stylesheets: ['https://use.typekit.net/eaz5jri.css'],
+  stylesheets: ["https://use.typekit.net/eaz5jri.css"],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: "https://github.com/Microkubes/microkubes"
   /* On page navigation for the current documentation page */

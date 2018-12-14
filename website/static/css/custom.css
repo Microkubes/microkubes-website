@@ -1,12 +1,18 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+@media only screen and (min-width: 360px) and (max-width: 736px) {
+  .container.paddingBottom.paddingTop .wrapper .gridBlock .threeByGridBlock {
+    margin: 20px 0px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
 }
 
 @media only screen and (max-width: 1023px) {
+  .wrapper .gridBlock .threeByGridBlock {
+    margin: 20px;
+  }
   .navigationWrapper.navigationSlider .slidingNav ul li a {
     color: #fff;
   }
@@ -18,7 +24,7 @@
     padding: 0px;
   }
 
-  .navPusher{
+  .navPusher {
     overflow: hidden;
   }
 
@@ -63,10 +69,11 @@ body {
   padding-top: 0;
 }
 
-.gridBlock .fourByGridBlock {
-  flex: 1 0 20%;
+.gridBlock .threeByGridBlock {
+  flex: 1 0 30%;
+  margin: 10px 30px 20px 0px;
   background-color: #fff;
-  padding: 4rem 6rem 3rem 6rem;
+  padding: 5rem 3.5rem;
   -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
@@ -101,6 +108,7 @@ body {
   color: #4a148c;
   font-weight: 500;
   padding: 1rem;
+  letter-spacing: 0.3px;
 }
 
 .navigationSlider .slidingNav ul li a:focus,
@@ -116,6 +124,9 @@ body {
   background-color: #4a148c;
   padding: 1rem 2.5rem;
   font-size: initial;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border: 2px solid #4a148c;
 }
 
 .button:hover,
@@ -123,13 +134,16 @@ body {
 .button:active {
   background: #fff;
   color: #4a148c;
-  border: 1px solid #4a148c;
+  border: 2px solid #4a148c;
 }
 
 .projectTitle {
   color: #fff;
+  letter-spacing: 1px;
 }
-
+.projectTitle > small {
+  letter-spacing: 1px;
+}
 .homeSplashFade {
   background-image: url(/img/illustration.png);
   background-repeat: no-repeat;
@@ -148,6 +162,7 @@ body {
 #footer.nav-footer {
   color: #fff;
   background: #4a148c;
+  letter-spacing: 0.5px;
 }
 
 .nav-footer .sitemap {
@@ -162,16 +177,22 @@ body {
   padding-top: 1rem;
 }
 
-.copyright a{
+.copyright a {
   color: inherit;
+}
+.nav-footer .sitemap h5 {
+  font-size: inherit;
 }
 
 .imageAlignTop .blockImage {
   max-width: 100px;
 }
+.toc .toggleNav ul li a {
+  font-size: inherit;
+}
 .section-title {
   color: #4a148c;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
   font-size: 2.5rem;
   font-weight: 700;
   margin-top: 1rem;

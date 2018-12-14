@@ -95,25 +95,54 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <Block layout="threeColumn">
     {[
       {
         content:
           "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
-        image: imgUrl("reliability.png"),
+        image: imgUrl("Service_Discovery.svg"),
         imageAlign: "top",
-        title: "High Scalability and Reliability"
+        title: "Service Discovery"
       },
       {
         content:
           "Our integrated user management ensures integrity of data by using OAuth2, JWT and SAML for user authentication and authorization. It increases security by eliminating the risk of passwords theft or reuse.",
-        image: imgUrl("user-management.png"),
+        image: imgUrl("Security.svg"),
+        imageAlign: "top",
+        title: "Security"
+      },
+      {
+        content:
+          "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
+        image: imgUrl("High Scalability_and_Availability.svg"),
+        imageAlign: "top",
+        title: "High Scalability & Availability"
+      },
+      {
+        content:
+          "Our integrated user management ensures integrity of data by using OAuth2, JWT and SAML for user authentication and authorization. It increases security by eliminating the risk of passwords theft or reuse.",
+        image: imgUrl("Integrated_User_Management.svg"),
         imageAlign: "top",
         title: "Integrated User Management"
+      },
+      {
+        content:
+          "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
+        image: imgUrl("Monitoring.svg"),
+        imageAlign: "top",
+        title: "Monitoring"
+      },
+      {
+        content:
+          "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
+        image: imgUrl("Polyglot_Programming .svg"),
+        imageAlign: "top",
+        title: "Polyglot Programming Environment with lightweight containers"
       }
     ]}
   </Block>
 );
+
 const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
