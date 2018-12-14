@@ -99,14 +99,14 @@ const Features = props => (
     {[
       {
         content:
-          "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
+          "One of the primary challenges with microservices architectures is allowing services to discover and interact with each other. Microkubes automatically detects where the services reside so they can interact with each other. The framework helps to control the interaction between services by providing fault tolerance and latency tolerance.",
         image: imgUrl("Service_Discovery.svg"),
         imageAlign: "top",
         title: "Service Discovery"
       },
       {
         content:
-          "Our integrated user management ensures integrity of data by using OAuth2, JWT and SAML for user authentication and authorization. It increases security by eliminating the risk of passwords theft or reuse.",
+          "Microkubes decouples security from the microservice implementation so service developers are not responsible for implementing security correctly. The framework provides capabilities for managing public/private keys, certificates and authentication and authorization by leveraging a role-based access control model.",
         image: imgUrl("Security.svg"),
         imageAlign: "top",
         title: "Security"
@@ -116,7 +116,7 @@ const Features = props => (
           "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
         image: imgUrl("High Scalability_and_Availability.svg"),
         imageAlign: "top",
-        title: "High Scalability & Availability"
+        title: "High Scalability and Availability"
       },
       {
         content:
@@ -127,17 +127,17 @@ const Features = props => (
       },
       {
         content:
-          "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
+          "Includes the ability for monitoring and alerting allowing to the IT operations to figure out where any problem resides, what’s failing, what’s working well and what’s not in a way that doesn’t require any instrumentation to be put into the microservice itself by developers.",
         image: imgUrl("Monitoring.svg"),
         imageAlign: "top",
         title: "Monitoring"
       },
       {
         content:
-          "The Microkubes framework is driven by efficiency. You can scale each microservice with the entire system, without facing any performance issues.As your services scale and the number of requests grows, Microkubes has the capacity to handle increases in traffic intelligently.",
+          "Microkubes is language agnostic framework which means it doesn’t force developers to use particular language. By using multi-stage docker builds we make sure that the containers are lightweight and dynamic. The platform has multicontainer capabilities where a single instance can host native code, Go, Python, Java, etc.",
         image: imgUrl("Polyglot_Programming .svg"),
         imageAlign: "top",
-        title: "Polyglot Programming Environment with lightweight containers"
+        title: "Polyglot Programming<br>Environment with Lightweight Containers"
       }
     ]}
   </Block>

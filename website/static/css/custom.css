@@ -69,6 +69,19 @@ body {
   padding-top: 0;
 }
 
+.blockElement.alignCenter.imageAlignTop.threeByGridBlock
+  .blockContent
+  h2
+  > div
+  > span
+  > p {
+  text-align: center;
+}
+.blockContent p {
+  hyphens: auto;
+  text-align: justify;
+}
+
 .gridBlock .threeByGridBlock {
   flex: 1 0 30%;
   margin: 10px 30px 20px 0px;
