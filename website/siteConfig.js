@@ -20,6 +20,7 @@ const siteConfig = {
   cname: "www.microkubes.com",
   headerLinks: [
     {
+      doc: "contributing",
       doc: "ci-cd",
       doc: "deployments",
       doc: "backends",

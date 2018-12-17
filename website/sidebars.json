@@ -10,7 +10,8 @@
       "security",
       "backends",
       "deployments",
-      "ci-cd"
+      "ci-cd",
+      "contributing"
     ]
   }
 }
