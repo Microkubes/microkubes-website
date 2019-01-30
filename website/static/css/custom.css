@@ -4,11 +4,17 @@
   .container.paddingBottom.paddingTop .wrapper .gridBlock .threeByGridBlock {
     margin: 20px 0px;
   }
+  html body .navPusher .homeContainer .homeSplashFade {
+    height: 90rem;
+    background-size: 90%;
+  }
 }
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 768px) {
+  body .navPusher .homeContainer .homeSplashFade {
+    height: 125rem;
+    padding: 0;
+  }
 }
-
 @media only screen and (max-width: 1023px) {
   .wrapper .gridBlock .threeByGridBlock {
     margin: 20px;
@@ -19,11 +25,9 @@
   .fixedHeaderContainer .logo {
     height: 110%;
   }
-
   .fixedHeaderContainer {
     padding: 0px;
   }
-
   .navPusher {
     overflow: hidden;
   }
@@ -38,15 +42,20 @@
   .navPusher .nav-footer .sitemap {
     margin: 2% 0 0 20%;
   }
+  .navPusher .homeContainer .homeSplashFade {
+    background-image: url(/img/illustration2.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    height: 155rem;
+    background-position-y: center;
+  }
 }
 
-@media only screen and (min-width: 1400px) {
-}
-
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1600px) {
   .homeContainer .homeSplashFade {
-    background-size: 95vw;
-    min-height: 35rem;
+    background-size: 95%;
+    height: 37rem;
+    padding-top: 1rem;
   }
 }
 
@@ -160,10 +169,9 @@ body {
 .homeSplashFade {
   background-image: url(/img/illustration.png);
   background-repeat: no-repeat;
-  min-height: 45rem;
-  padding-top: 3%;
+  height: 45rem;
+  padding-top: 4rem;
   background-position: center 73%;
-  background-size: initial;
 }
 .mainContainer .wrapper .post .postHeader {
   padding-top: 30px;
