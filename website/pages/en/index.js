@@ -46,6 +46,11 @@ const SplashContainer = props => (
   <div className="homeContainer">
     <div className="homeSplashFade">
       <div className="wrapper homeWrapper">{props.children}</div>
+      <div className="heroSection">
+        <div className="featureFirst"><img src={'/img/featureFirstImg.png'}/></div>
+        <div className="featureSecond"><img src={'/img/featureSecondImg.png'}/></div>
+        <div className="FeatureThird"><img src={'/img/featureThirdImg.png'}/></div>
+      </div>
     </div>
   </div>
 );

@@ -4,15 +4,62 @@
   .container.paddingBottom.paddingTop .wrapper .gridBlock .threeByGridBlock {
     margin: 20px 0px;
   }
-  html body .navPusher .homeContainer .homeSplashFade {
-    height: 90rem;
-    background-size: 90%;
+  .homeSplashFade .heroSection .featureSecond::before {
+    content: "";
+    width: 10%;
+    transform: rotate(-90deg);
+    border-bottom: dashed 2px #fff3;
+    position: absolute;
+    right: 40%;
+    top: 8%;
+    z-index: -1;
+  }
+
+  .homeSplashFade .heroSection .featureSecond::after {
+    content: "";
+    width: 10%;
+    transform: rotate(-90deg);
+    border-bottom: dashed 2px #fff3;
+    position: absolute;
+    left: 50%;
+    top: 97%;
+    z-index: -1;
   }
 }
+
 @media only screen and (max-width: 768px) {
-  body .navPusher .homeContainer .homeSplashFade {
-    height: 125rem;
+  .homeContainer .homeSplashFade {
     padding: 0;
+  }
+  .homeSplashFade .heroSection {
+    display: block;
+    margin-top: 2rem;
+  }
+  .heroSection .featureSecond {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .heroSection .featureSecond::before {
+    content: "";
+    width: 8%;
+    transform: rotate(-90deg);
+    border-bottom: dashed 2px #fff3;
+    position: absolute;
+    right: 42%;
+    top: 10%;
+    z-index: -1;
+  }
+
+  .heroSection .featureSecond::after {
+    content: "";
+    width: 8%;
+    transform: rotate(-90deg);
+    border-bottom: dashed 2px #fff3;
+    position: absolute;
+    left: 50%;
+    top: 97%;
+    z-index: -1;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -31,31 +78,11 @@
   .navPusher {
     overflow: hidden;
   }
-
-  .navPusher .homeContainer .homeSplashFade {
-    background-size: initial;
-    min-height: 40rem;
-  }
   .wrapper .gridBlock .fourByGridBlock {
     padding: 4rem 1rem 4rem 1rem;
   }
   .navPusher .nav-footer .sitemap {
     margin: 2% 0 0 20%;
-  }
-  .navPusher .homeContainer .homeSplashFade {
-    background-image: url(/img/illustration2.png);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    height: 155rem;
-    background-position-y: center;
-  }
-}
-
-@media only screen and (max-width: 1600px) {
-  .homeContainer .homeSplashFade {
-    background-size: 95%;
-    height: 37rem;
-    padding-top: 1rem;
   }
 }
 
@@ -167,12 +194,38 @@ body {
   letter-spacing: 1px;
 }
 .homeSplashFade {
-  background-image: url(/img/illustration.png);
-  background-repeat: no-repeat;
-  height: 45rem;
   padding-top: 4rem;
-  background-position: center 73%;
 }
+
+.heroSection {
+  justify-content: center;
+  display: flex;
+  padding: 0px 30px 70px;
+}
+.featureSecond {
+  position: relative;
+  z-index: 1;
+}
+.featureSecond::before {
+  content: "";
+  width: 17%;
+  border-bottom: dashed 2px #fff3;
+  position: absolute;
+  right: 85%;
+  top: 50%;
+  z-index: -1;
+}
+
+.featureSecond::after {
+  content: "";
+  width: 17%;
+  border-bottom: dashed 2px #fff3;
+  position: absolute;
+  left: 98%;
+  top: 50%;
+  z-index: -1;
+}
+
 .mainContainer .wrapper .post .postHeader {
   padding-top: 30px;
 }
