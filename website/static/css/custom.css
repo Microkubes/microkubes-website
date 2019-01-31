@@ -27,7 +27,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1023px) {
   .homeContainer .homeSplashFade {
     padding: 0;
   }
@@ -61,8 +61,6 @@
     top: 97%;
     z-index: -1;
   }
-}
-@media only screen and (max-width: 1023px) {
   .wrapper .gridBlock .threeByGridBlock {
     margin: 20px;
   }
