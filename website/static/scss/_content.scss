@@ -1,11 +1,11 @@
 body {
-  font-family: "futura-pt";
+  font-family: "futura-pt", sans-serif;
 }
 
 .wrapper {
-    @include xl {
-        margin-left: $spacer / 5.5;
-      }
+  @include xl {
+    margin-left: $spacer / 5.5;
+  }
   @include lg {
     margin-left: $spacer / 5;
   }
@@ -16,7 +16,7 @@ body {
     .threeByGridBlock {
       flex: 1 0 30%;
       @include md {
-      flex: 1 0 55%;
+        flex: 1 0 55%;
       }
 
       margin: 0 $spacer / 5 $spacer / 5 0;
@@ -28,14 +28,7 @@ body {
       @include shadow;
       background-size: 35px;
     }
-    .fourByGridBlock {
-      padding: $spacer - 6 $spacer - 9 $spacer - 6 $spacer - 9;
-    }
   }
-}
-
-.container.paddingTop {
-  padding-top: 0;
 }
 
 .blockElement.alignCenter.imageAlignTop.threeByGridBlock
@@ -49,6 +42,10 @@ body {
 .blockContent p {
   hyphens: auto;
   text-align: justify;
+}
+
+.fourByGridBlock {
+  padding: $spacer - 6 $spacer - 9 $spacer - 6 $spacer - 9;
 }
 
 .productShowcaseSection.paddingBottom {

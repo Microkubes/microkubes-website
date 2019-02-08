@@ -1,14 +1,14 @@
 // Small tablets and large smartphones (landscape view)
-$screen-sm-max: 575.98px;
+$screen-sm-max: 576px;
 
 // Small tablets (portrait view)
 $screen-md-max: 768px;
 
 // Tablets and small desktops
-$screen-lg-max: 991.98px;
+$screen-lg-max: 992px;
 
 // Large tablets and desktops
-$screen-xl-max: 1199.98px;
+$screen-xl-max: 1200px;
 
 // Small devices
 @mixin sm {
@@ -39,7 +39,5 @@ $screen-xl-max: 1199.98px;
 }
 
 @mixin shadow {
-  -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
 }

@@ -1,12 +1,11 @@
-@import url("https://use.typekit.net/eaz5jri.css");
 body {
-  font-family: "futura-pt"; }
+  font-family: "futura-pt", sans-serif; }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   .wrapper {
     margin-left: 1.81818rem; } }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .wrapper {
     margin-left: 2rem; } }
 
@@ -19,8 +18,6 @@ body {
   margin: 0 2rem 2rem 0;
   background-color: #ffffff;
   padding: 5rem 3.33333rem;
-  -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
   background-size: 35px; }
   @media (max-width: 768px) {
@@ -29,12 +26,6 @@ body {
   @media (max-width: 768px) {
     .wrapper .gridBlock .threeByGridBlock {
       margin: 0 0 2rem 0; } }
-
-.wrapper .gridBlock .fourByGridBlock {
-  padding: 4rem 1rem 4rem 1rem; }
-
-.container.paddingTop {
-  padding-top: 0; }
 
 .blockElement.alignCenter.imageAlignTop.threeByGridBlock
 .blockContent
@@ -47,6 +38,9 @@ h2
 .blockContent p {
   hyphens: auto;
   text-align: justify; }
+
+.fourByGridBlock {
+  padding: 4rem 1rem 4rem 1rem; }
 
 .productShowcaseSection.paddingBottom {
   padding-bottom: 4rem;
@@ -107,21 +101,21 @@ small {
   color: #ffffff; }
   .homeContainer .homeSplashFade {
     padding-top: 4rem; }
-    @media (max-width: 991.98px) {
+    @media (max-width: 992px) {
       .homeContainer .homeSplashFade {
         padding-top: 0; } }
     .homeContainer .homeSplashFade .heroSection {
       justify-content: center;
       display: flex;
       padding: 0 2rem 5rem; }
-      @media (max-width: 991.98px) {
+      @media (max-width: 992px) {
         .homeContainer .homeSplashFade .heroSection {
           display: block;
           margin-top: 2rem; } }
       .homeContainer .homeSplashFade .heroSection .featureSecond {
         position: relative;
         z-index: 1; }
-        @media (max-width: 991.98px) {
+        @media (max-width: 992px) {
           .homeContainer .homeSplashFade .heroSection .featureSecond {
             padding-top: 5rem;
             padding-bottom: 5rem; } }
@@ -133,7 +127,7 @@ small {
           right: 85%;
           top: 50%;
           z-index: -1; }
-          @media (max-width: 991.98px) {
+          @media (max-width: 992px) {
             .homeContainer .homeSplashFade .heroSection .featureSecond::before {
               width: 8%;
               transform: rotate(-90deg);
@@ -147,7 +141,7 @@ small {
           left: 98%;
           top: 50%;
           z-index: -1; }
-          @media (max-width: 991.98px) {
+          @media (max-width: 992px) {
             .homeContainer .homeSplashFade .heroSection .featureSecond::after {
               width: 8%;
               transform: rotate(-90deg);
@@ -157,39 +151,37 @@ small {
 .fixedHeaderContainer {
   padding: 1rem;
   background: #ffffff;
-  -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.15); }
-  @media (max-width: 991.98px) {
+  @media (max-width: 992px) {
     .fixedHeaderContainer {
       padding: 0.5rem; } }
   .fixedHeaderContainer header .headerTitleWithLogo {
     display: none; }
   .fixedHeaderContainer header img {
     height: 140%; }
-    @media (max-width: 991.98px) {
+    @media (max-width: 992px) {
       .fixedHeaderContainer header img {
         height: 125%; } }
+
+.navigationSlider .slidingNav ul li:last-child a {
+  border: 0.15rem solid #4a148c;
+  padding: 0 1rem;
+  font-weight: 500; }
 
 .navigationSlider .slidingNav ul li a {
   color: #4a148c;
   font-weight: 500;
   padding: 1rem;
   letter-spacing: 0.3px; }
-  @media (max-width: 991.98px) {
+  @media (max-width: 992px) {
     .navigationSlider .slidingNav ul li a {
       color: #ffffff; } }
   .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:active {
     background: #4a148c;
     font-weight: 500; }
-    @media (max-width: 991.98px) {
+    @media (max-width: 992px) {
       .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:active {
         background: #fff3; } }
-
-.navigationSlider .slidingNav ul li:last-child a {
-  border: 0.15rem solid #4a148c;
-  padding: 0 1rem;
-  font-weight: 500; }
 
 .navPusher {
   overflow: hidden; }

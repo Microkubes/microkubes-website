@@ -12,10 +12,16 @@
     img {
       height: 140%;
       @include lg {
-        height: 125%; 
+        height: 125%;
       }
     }
   }
+}
+
+.navigationSlider .slidingNav ul li:last-child a {
+  border: 0.15rem solid $primary-color;
+  padding: 0 $spacer - 9;
+  font-weight: 500;
 }
 
 .navigationSlider .slidingNav ul li a {
@@ -35,9 +41,4 @@
     }
     font-weight: 500;
   }
-}
-.navigationSlider .slidingNav ul li:last-child a {
-  border: 0.15rem solid $primary-color;
-  padding: 0 $spacer - 9;
-  font-weight: 500;
 }

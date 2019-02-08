@@ -50,9 +50,9 @@ const siteConfig = {
     secondaryColor: "#4A148C"
   },
   /* custom fonts for website */
-  fonts: {
+  /* fonts: {
     default: ["futura-pt", "-apple-system", "system-ui"]
-  },
+  }, */
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: "Copyright &copy; " + new Date().getFullYear() + " Keitaro Inc",
   // organizationName: 'deltice', // or set an env variable ORGANIZATION_NAME
