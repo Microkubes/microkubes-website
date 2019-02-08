@@ -29,7 +29,7 @@
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass static/scss/styles.scss   static/css/styles.css",
+    "build-css": "node-sass static/scss/styles.scss --output-style compressed static/css/styles.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "devDependencies": {
