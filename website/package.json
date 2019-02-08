@@ -1,4 +1,25 @@
 {
+  "name": "microkubes.github.io",
+  "version": "1.0.0",
+  "description": "Official website of Microkubes microservice framework",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microkubes/microkubes.github.io.git"
+  },
+  "author": "Miroslav Gruevski Miro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Microkubes/microkubes.github.io/issues"
+  },
+  "homepage": "https://github.com/Microkubes/microkubes.github.io#readme",
+  "dependencies": {
+    "docusaurus": "^1.7.2",
+    "npm": "^6.7.0"
+  },
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
@@ -6,9 +27,13 @@
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
-    "rename-version": "docusaurus-rename-version"
+    "rename-version": "docusaurus-rename-version",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass static/scss/styles.scss --output-style compressed static/css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "devDependencies": {
-    "docusaurus": "^1.5.1"
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
   }
 }
