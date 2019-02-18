@@ -41,7 +41,7 @@ class Help extends React.Component {
               sponsor for Microkubes is Keitaro. Keitaro is a Linux and
               open-source software consultancy with strong focus in
               microservices, bleeding edge technologies and managed services. If
-              you encounter any issues and need help, contact the <a href="https://www.keitaro.com/connect.html">Keitaro team</a>.
+              you encounter any issues and need help, contact the <a href="https://www.keitaro.com/contact/">Keitaro team</a>.
               We encourage contributions from the community. For issues
               and suggestions, please log them on the Microkubes repository on
               Github.
