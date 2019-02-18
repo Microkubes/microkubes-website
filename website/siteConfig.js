@@ -18,6 +18,7 @@ const siteConfig = {
   twitter: true,
   twitterUsername: "Microkubes",
   cname: "www.microkubes.com",
+  gaTrackingId: 'UA-134728683-1',
   headerLinks: [
     {
       doc: "ci-cd",
