@@ -66,6 +66,9 @@ class Footer extends React.Component {
         <section className="copyright">
           Copyright &copy; {currentYear} <a href="https://www.keitaro.com/">Keitaro Inc.</a>
         </section>
+        <noscript>
+          <img height="1" width="1" style={{ display: "none"}} alt="" src="https://dc.ads.linkedin.com/collect/?pid=844314&amp;fmt=gif" />
+        </noscript>
       </footer>
     );
   }
