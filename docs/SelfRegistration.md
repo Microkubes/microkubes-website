@@ -3,7 +3,7 @@ id: self-registration
 title: Self Registration on Kong
 ---
 
-Microkubes has its own [Golang Package](https://github.com/Microkubes/microservice-tools/tree/master/gateway) and [Python library](https://github.com/Microkubes/microkubes-python) for self registration on Kong. They provide the basic functionality of registering/unregistration for your own service to the API Gateway
+Microkubes has its own [Golang Package](https://github.com/Microkubes/microservice-tools/tree/master/gateway) and [Python library](https://github.com/Microkubes/microkubes-python) for self registration on Kong. They provide the basic functionality of registering/unregistering your own services to the API Gateway.
 
 ## Python Library
 
@@ -31,7 +31,7 @@ registrator.register(name="hello-service",                  # the service name.
 
 ## Golang Package
 
-The package provides the basic interface for self regstration/unregistration of microservices. It is easy to set up and easy to use. It makes sure that when service goes down it will be unregister, although it is not required.
+The package provides the basic interface for self regstration/unregistration of microservices. It is easy to set up and easy to use. It makes sure that when service goes down it will be unregistered, although it is not required.
 
 Example:
 
@@ -45,46 +45,46 @@ import (
 )
 
 func main(){
-    // load the Gateway URL and the config file path
-    gatewayAdminURL, configFile := loadGatewaySettings()
+  // load the Gateway URL and the config file path
+  gatewayAdminURL, configFile := loadGatewaySettings()
 
     // read the configuration from config file
-	serviceConfig, err := config.LoadConfig(configFile)
-	if err != nil {
-		service.LogError("config", "err", err)
-		return
-    }
+  serviceConfig, err := config.LoadConfig(configFile)
+  if err != nil {
+    service.LogError("config", "err", err)
+    return
+  }
 
-    // creates new gateway.Registration service with the service configuratipn. We pass the default http client here
-	registration := gateway.NewKongGateway(gatewayAdminURL, &http.Client{}, serviceConfig.Service)
+  // creates new gateway.Registration service with the service configuratipn. We pass the default http client here
+  registration := gateway.NewKongGateway(gatewayAdminURL, &http.Client{}, serviceConfig.Service)
 
-    // at this point we do a self-registration to API Gateway
-	err = registration.SelfRegister()
-	if err != nil {
-        // if there is an error it means we failed to self-register so we panic with error
-		panic(err)
-	}
+  // at this point we do a self-registration to API Gateway
+  err = registration.SelfRegister()
+  if err != nil {
+    // if there is an error it means we failed to self-register so we panic with error
+    panic(err)
+  }
 
-    // the unregistration is deferred for after main() executes. If we shut down
-    // the service, it is nice to unregister, although it is not required.
-    defer registration.Unregister()
+  // the unregistration is deferred for after main() executes. If we shut down
+  // the service, it is nice to unregister, although it is not required.
+  defer registration.Unregister()
 
-    // rest of the code for main goes here
-    ...
+  // rest of the code for main goes here
+  ...
 }
 
 func loadGatewaySettings() (string, string) {
-	gatewayURL := os.Getenv("API_GATEWAY_URL")
-	serviceConfigFile := os.Getenv("SERVICE_CONFIG_FILE")
+  gatewayURL := os.Getenv("API_GATEWAY_URL")
+  serviceConfigFile := os.Getenv("SERVICE_CONFIG_FILE")
 
-	if gatewayURL == "" {
-		gatewayURL = "http://localhost:8001"
-	}
-	if serviceConfigFile == "" {
-		serviceConfigFile = "/run/secrets/microservice_user_config.json"
-	}
+  if gatewayURL == "" {
+    gatewayURL = "http://localhost:8001"
+  }
+  if serviceConfigFile == "" {
+    serviceConfigFile = "/run/secrets/microservice_user_config.json"
+  }
 
-	return gatewayURL, serviceConfigFile
+  return gatewayURL, serviceConfigFile
 }
 ```
 
@@ -92,7 +92,7 @@ As you can see from the above example API gateway URL and service config are set
 
 The service loads the `gateway` configuration config file. Here's an example of a JSON configuration file:
 
-```
+```json
 {
   "service": {
     "name": "microservice-name",
@@ -112,16 +112,15 @@ The service loads the `gateway` configuration config file. Here's an example of 
 ```
 
 Configuration properties:
- * **name** - ```"microservice-name"``` - the name of the service.
- * **port** - ```8080``` - port on which the microservice is running.
- * **paths** - ```/service-path``` - A list of paths that match this Route
- * **virtual_host** - ```"microservice-name.services.jormugandr.org"``` domain name of the service group/cluster.
- * **hosts** - list of valid hosts. Used for proxying and load balancing of the incoming request. You need to have at least the **virtual_host** in the list.
- * **weight** - instance weight - user for load balancing.
- * **slots** - maximal number of service instances.
- * **gatewayUrl** - ```http://kong:8000``` - is Gateway proxy URL
- * **gatewayAdminUrl** - ```gatewayAdminUrl``` - is Admin Gateway URL
 
+* **name** - ```"microservice-name"``` - the name of the service.
+* **port** - ```8080``` - port on which the microservice is running.
+* **paths** - ```/service-path``` - A list of paths that match this Route
+* **virtual_host** - ```"microservice-name.services.jormugandr.org"``` domain name of the service group/cluster.
+* **hosts** - list of valid hosts. Used for proxying and load balancing of the incoming request. You need to have at least the **virtual_host** in the list.
+* **weight** - instance weight - user for load balancing.
+* **slots** - maximal number of service instances.
+* **gatewayUrl** - ```http://kong:8000``` - is Gateway proxy URL
+* **gatewayAdminUrl** - ```gatewayAdminUrl``` - is Admin Gateway URL
 
 **Note:** The registration of the service to the gateway should be one of the first things that the service does. On Microkubes, microservices do this check first and terminate if anything goes wrong.
-

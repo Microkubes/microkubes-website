@@ -3,17 +3,17 @@ id: deployments
 title: Deployments
 ---
 
-[Microkubes](https://github.com/Microkubes/microkubes) supports [Kubernetes](https://kubernetes.io/) and [Docker Swarm](https://docs.docker.com/engine/swarm/) deployments. It works on any cloud, is easy to set up and simple to use at any scale. It provides a completely integrated open source Microservices framework, which works out of the box on Kubernetes and Swarm. The framework is easy to use, can be deployed on any infrastructure.
+[Microkubes](https://github.com/Microkubes/microkubes) supports [Kubernetes](https://kubernetes.io/) and [Docker Swarm](https://docs.docker.com/engine/swarm/) deployments. It works out of the box on any local or cloud infrastructure, it is easy to set up and simple to use at any scale.
 
-Each microservice has its own Dockerfile. We use multi-stage build in order reduce the size of the image. The base image for building the microservices is the ```goa-build``` image. It contains the all dependencies needed for the platform which speed up the build process. Microkubes use the ```alpine:3.7``` image for running the microservices.
+Each microservice has its own Dockerfile. We use multi-stage build in order to reduce the size of the image. The base image for building the microservices is the ```goa-build``` image. It contains all dependencies needed for the platform which speeds up the build process. Microkubes uses the ```alpine:3.7``` image for running the microservices.
 
 ![stack](/img/microkubes.png)
 
-Kubernetes and Docker Swarm are two of the most powerful IT cloud container management platforms. Microkubes is build on top of these technologies
+Kubernetes and Docker Swarm are two of the most powerful IT cloud container management platforms. Microkubes is build on top of these technologies.
 
 ## Kubernetes
 
-These instructions will let you deploy the Microkubes on Kubernetes
+These instructions will let you deploy the Microkubes on Kubernetes.
 
 ### Preparing
 
@@ -22,6 +22,8 @@ These instructions will let you deploy the Microkubes on Kubernetes
 ```bash
 minikube start
 ```
+
+**Note:** Minikube is not recommended for production use. If you have an existing cluster or prefer production ready cluster such as [GCP kubernetes cluster](GCP.md), skip this command.
 
 2. Create keys for authorization servers:
 
@@ -40,14 +42,14 @@ kubectl create -f kubernetes/serviceaccount.yaml
 
 ```bash
 kubectl -n microkubes create secret generic microkubes-secrets \
-	--from-file=keys/default \
-	--from-file=keys/default.pub \
-	--from-file=keys/private.pem \
-	--from-file=keys/public.pub \
-	--from-file=keys/service.cert \
-	--from-file=keys/service.key \
-	--from-file=keys/system \
-	--from-file=keys/system.pub
+    --from-file=keys/default \
+    --from-file=keys/default.pub \
+    --from-file=keys/private.pem \
+    --from-file=keys/public.pub \
+    --from-file=keys/service.cert \
+    --from-file=keys/service.key \
+    --from-file=keys/system \
+    --from-file=keys/system.pub
 ```
 
 5. Create a secret for the mongo objects creation
@@ -60,6 +62,7 @@ kubectl -n microkubes create secret generic mongo-init-db \
 ### Deploy Microkubes
 
 Run the following commands:
+
 ```bash
 cd kubernetes/
 kubectl create -f consul.yaml
@@ -71,12 +74,13 @@ kubectl create -f fakesmtp.yaml
 kubectl create -f microkubes.yaml
 ```
 
-The platform takes about 5 minutes to bring up and you can follow the progress using `kubectl -n microkubes get pods -w`.
+The platform takes about 5 minutes to start. You can follow the progress with `kubectl -n microkubes get pods -w`.
 Once all services are running, you can start using microkubes.
 
 ### Check that microkubes is up and running
 
-The API gateway is exposed as a nodePort in kubernetes, you can get the URL and do an http GET request to check that microkubes is responding.
+The API gateway is exposed as a nodePort in kubernetes. You can get the URL and perform an http GET request to check if microkubes is responding.
+
 ```bash
 MICROKUBES_URL=`minikube service -n microkubes kong --url`
 curl $MICROKUBES_URL/users
@@ -86,7 +90,7 @@ curl $MICROKUBES_URL/users
 
 ## Docker Swarm
 
-The [docker](https://github.com/Microkubes/microkubes/tree/master/docker) subdirectory of Microkubes platform contains docker compose files to run Microkubes platform on docker swarm
+The [docker](https://github.com/Microkubes/microkubes/tree/master/docker) subdirectory of Microkubes platform contains docker compose files to run Microkubes platform on docker swarm.
 
 ### Run Microkubes on Docker Swarm
 
@@ -141,9 +145,10 @@ The script syntax:
 ```
 
 where:
+
 * ```build_directory``` is the target directory in which to checkout the source code and from which to build the docker images.
-If the direcotry does not exists, it will be created. If the build directory already has the subprojects cloned with git, then
-the script will not attempt to clone the repositories and will use the existing ones. Default target direcotry is the current
+If the directory does not exists, it will be created. If the build directory already has the subprojects cloned with git, then
+the script will not attempt to clone the repositories and will use the existing ones. Default target directory is the current
 working directory.
 * ```images_tag``` - the docker tag to append to the docker images. Default is ```latest``` (for example: ```microkubes/kong:latest```).
 
@@ -174,7 +179,7 @@ CMD ["/microservice-name"]
 
 # Microkubes Helm Chart
 
-This directory contains a Kubernetes chart to deploy [Microkubes](https://github.com/Microkubes/microkubes) cluster.
+This directory contains a helm chart for deploying [Microkubes](https://github.com/Microkubes/microkubes) on a kubernetes cluster.
 The helm chart implements all the relevant configuration parameters that can be configured through  a [value file](https://github.com/Microkubes/microkubes/blob/helm/kubernetes/helm/microkubes/values.yaml) or directly on command line. Also the helm chart supports deploying using an ingress to kubernetes clusters that have a configured ingress controller.
 
 ## Prerequisites Details
@@ -182,7 +187,7 @@ The helm chart implements all the relevant configuration parameters that can be 
 * Kubernetes 1.9
 * Install [Helm](https://github.com/helm/helm/releases)
 * Make sure that you have helm tiller running in your cluster, if not run `helm init`
-* Setup correctly kubectl and kubeconfig setup before running helm.
+* Set up kubectl and kubeconfig correctly before running helm.
 
 ## Deploy Microkubes on kubernetes cluster
 
@@ -197,7 +202,7 @@ $ helm install microkubes/ --namespace <namespace-name> --name <release-name> \
     --set postgresql.postgresUser=kong,postgresql.postgresPassword=<secretpassword>,postgresql.postgresDatabase=kong
 ```
 
-**Note:** PostgreSQL user should be `kong` and database `kong` as well
+**Note:** PostgreSQL user should be `kong` and database name should also be `kong`.
 
 ## Configuration
 
@@ -207,6 +212,7 @@ This file contains variables that will be passed to the templates. All configura
 Alternatively, you can specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 > **Tip**: You can use values file different from the default [values.yaml](https://github.com/Microkubes/microkubes/blob/helm/kubernetes/helm/microkubes/values.yaml) that specifies the values for the parameters by providing that file while installing the chart. For example:
+
 ```console
 $ helm install --namespace <namespace-name> --name <release-name> -f microkubes/values-development.yaml microkubes/
 ```

@@ -3,7 +3,7 @@ id: ci-cd
 title: CI, CD, Code Quality
 ---
 
-For all changes in the platform PR must be creating. On merging the PR to `master` branch [TravisCI](https://travis-ci.org/) is triggered. The build makes several things:
+For all changes in the platform PR must be created. On merging the PR to `master` branch, [TravisCI](https://travis-ci.org/) is triggered. The build makes several things:
 
 * Download all dependencies
 * Install the microservice
@@ -64,18 +64,18 @@ DOCKERHUB_NAMESPACE ?= microkubes
 IMAGE := ${DOCKERHUB_NAMESPACE}/microservice-user:${VERSION}
 
 build:
-	docker build -t ${IMAGE} .
+  docker build -t ${IMAGE} .
 
 push: build
-	docker push ${IMAGE}
+  docker push ${IMAGE}
 
 run: build
-	docker run -p 8080:8080 ${IMAGE}
+  docker run -p 8080:8080 ${IMAGE}
 ```
 
-When it building/pushing docker images it takes the latest git tag and set it as image tag. Namespace by default is `microkubes`.
+When the docker images are built/pushed, they are tagged with the same tag as the latest git tag. The default namespace is `microkubes`.
 
-For Code Quality we use [Code Climate](https://codeclimate.com/). It makes code review, report test coverage and so on. Travis build reports the test coverage to Code Climate. It supports Golang among the other programming languages. Each microservice has .codeclimate.yml file which sets the Code Climate configuration:
+For Code Quality we use [Code Climate](https://codeclimate.com/). It makes code review, reports test coverage and so on. Travis build reports the test coverage to Code Climate. It supports Golang among other programming languages. Each microservice has .codeclimate.yml file which sets the Code Climate configuration:
 
 ```yaml
 ---
