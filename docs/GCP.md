@@ -11,7 +11,10 @@ Google offers managed Kubernetes clusters on Google Cloud Platform. There are va
 
 Below, we present a simple setup to get you up and running as quickly as possible. For a more complex scenario and all available options, please see the official Google documentation.
 
-Make sure you have the Google Kubernetes Engine API enabled in your GCP account and Cloud SDK installed on the machine where you will run gcloud commands from.
+## Prerequisites
+
+- Google Kubernetes Engine API enabled in your GCP account;
+- Cloud SDK and kubectl installed on the machine on which you will run the commands.
 
 ## Cluster Setup
 
