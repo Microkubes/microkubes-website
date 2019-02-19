@@ -63,7 +63,11 @@ const siteConfig = {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: "default"
   },
-  scripts: ["https://buttons.github.io/buttons.js"],
+  scripts: [
+    "https://buttons.github.io/buttons.js",
+    "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+    "/js/linkedin.js"
+  ],
   stylesheets: ["https://use.typekit.net/eaz5jri.css"],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: "https://github.com/Microkubes/microkubes"
