@@ -7,9 +7,7 @@ The [installation and setup guide](Introduction-InstallationAndSetup.md) uses mi
 
 # Set up Kubernetes cluster on AWS
 
-Amazon offers managed Kubernetes clusters on AWS. There are various configuration setups available depending on your needs.
-
-Below, we present a simple setup to get you up and running as quickly as possible. We will use [kops](https://github.com/kubernetes/kops) tool to create the cluster.
+Below, we present a simple kubernetes setup using [kops](https://github.com/kubernetes/kops) tool to create the cluster. If you want to use Amazon's managed kubernetes offering (AWS EKS) instead, please see [Getting Started with Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 
 ## Prerequisites
 
