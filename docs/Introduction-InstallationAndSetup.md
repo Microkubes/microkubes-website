@@ -18,7 +18,7 @@ If you don't have Docker installed on your machine please follow these instructi
 
 The easiest way to have Kubernetes running on your machine is by installing Minikube version from Kubernetes following this [Minikube Install](https://kubernetes.io/docs/tasks/tools/install-minikube/) guide.
 
-Minikube is not recommended for production use. For an example production ready cluster see [Set up Google Kubernetes Engine cluster](GCP.md) or [Set up Kubernetes cluster on AWS](AWS.md)
+Minikube is not recommended for production use. For an example production ready cluster see [Set up Google Kubernetes Engine cluster](GCP.md) or [Set up Kubernetes cluster on AWS EKS](AWS-EKS.md). Alternatively you can also take a look at [Set up Kubernetes cluster on AWS with kops](AWS-kops.md)
 
 ## Start Microkubes
 

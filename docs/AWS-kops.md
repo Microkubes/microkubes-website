@@ -1,11 +1,11 @@
 ---
 id: setup-aws-cluster
-title: Set up Kubernetes cluster on AWS
+title: Set up Kubernetes cluster on AWS with kops
 ---
 
 The [installation and setup guide](Introduction-InstallationAndSetup.md) uses minikube kubernetes cluster which is recommended only for learning and test purposes. Below are instructions for creating production ready kubernetes cluster on AWS.
 
-# Set up Kubernetes cluster on AWS
+# Set up Kubernetes cluster on AWS with kops
 
 Below, we present a simple kubernetes setup using [kops](https://github.com/kubernetes/kops) tool to create the cluster. If you want to use Amazon's managed kubernetes offering (AWS EKS) instead, please see [Getting Started with Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 
@@ -25,7 +25,7 @@ mv kops-linux-amd64 /usr/local/bin/kops
 
 There are certain preparatory steps that need to be performed before running the kops command such as creating dedicated IAM user for kops, configuring credentials, policies, permissions and access keys as well as setting up the dedicated S3 bucket storage for storing the state of the cluster, but these are beyond the scope of this document. For details on how to prepare AWS for kops see [Getting started with kops on AWS](https://github.com/kubernetes/kops/blob/master/docs/aws.md)
 
-The below command will generate a cluster configuration, but not start building it:
+The command below will generate a cluster configuration, but not start building it:
 
 ```bash
 kops create cluster --name CLUSTER_NAME --master-count 3 --node-count 1 \
