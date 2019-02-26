@@ -193,19 +193,6 @@ const FeatureCalloutDownload = props => (
   </div>
 );
 
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: "Talk about learning how to use this",
-        image: imgUrl("microkubes-logo.svg"),
-        imageAlign: "right",
-        title: "Learn How"
-      }
-    ]}
-  </Block>
-);
-
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {
     return null;
