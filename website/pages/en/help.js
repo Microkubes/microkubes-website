@@ -34,18 +34,18 @@ class Help extends React.Component {
           <div className="post">
             <header className="postHeader">
               <h2>Need help?</h2>
+              <p>
+                Microkubes is an open source project licensed under the Apache
+                License 2.0. The source code can be found on Github. The main
+                sponsor for Microkubes is Keitaro. Keitaro is a Linux and
+                open-source software consultancy with strong focus in
+                microservices, bleeding edge technologies and managed services. If
+                you encounter any issues and need help, contact the <a href="https://www.keitaro.com/contact/">Keitaro team</a>.
+                We encourage contributions from the community. For issues
+                and suggestions, please log them on the Microkubes repository on
+                Github.
+              </p>
             </header>
-            <p>
-              Microkubes is an open source project licensed under the Apache
-              License 2.0. The source code can be found on Github. The main
-              sponsor for Microkubes is Keitaro. Keitaro is a Linux and
-              open-source software consultancy with strong focus in
-              microservices, bleeding edge technologies and managed services. If
-              you encounter any issues and need help, contact the <a href="https://www.keitaro.com/contact/">Keitaro team</a>.
-              We encourage contributions from the community. For issues
-              and suggestions, please log them on the Microkubes repository on
-              Github.
-            </p>
             <GridBlock contents={supportLinks} layout="threeColumn" />
           </div>
         </Container>
