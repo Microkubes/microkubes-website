@@ -36,6 +36,7 @@ const siteConfig = {
     },
     { page: "help", label: "Support" },
     { page: "about", label: "About" },
+    { page: "contact", label: "Contact" },
     {
       href: "https://github.com/Microkubes/microkubes/releases",
       label: "Download"
@@ -66,7 +67,9 @@ const siteConfig = {
   scripts: [
     "https://buttons.github.io/buttons.js",
     "https://snap.licdn.com/li.lms-analytics/insight.min.js",
-    "/js/linkedin.js"
+    "/js/linkedin.js",
+    "//js.hsforms.net/forms/shell.js",
+    "/js/contact.js",
   ],
   stylesheets: ["https://use.typekit.net/eaz5jri.css"],
   // You may provide arbitrary config keys to be used as needed by your template.
