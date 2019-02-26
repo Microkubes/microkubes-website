@@ -18,10 +18,10 @@ class Help extends React.Component {
     const supportLinks = [
       {
         content:
-          'Microkubes is an open source framework, for building data management platforms by using microservices. It is based on proven technologies, that are in production in some of the most demanding applications. Microkubes’ open source framework helps you to develop projects faster and easier than ever before.Be a step ahead and save months worth of work by using our ready-to-use framework with already integrated user management (OAUTH2; JWT; SAML).Its integrated development environment, allows to set the focus on solving business problems instead of wiring services together. Building a project with a single command, which starts the supporting components of your microservices, as well as the Microkubes` infrastructure.Main features:High scalability and reliability Integrated user management (OAUTH2; JWT; SAML)Complete microservice out of the box. MicroK’s features enable you to meet demanding user expectations, faster and with less risk.',
+          'Microkubes is an open source framework, for building data management platforms by using microservices. It is based on proven technologies, that are in production in some of the most demanding applications. Microkubes\' open source framework helps you to develop projects faster and easier than ever before. Be a step ahead and save months worth of work by using our ready-to-use framework with already integrated user management (OAUTH2; JWT; SAML).Its integrated development environment, allows to set the focus on solving business problems instead of wiring services together. Building a project with a single command, which starts the supporting components of your microservices, as well as the Microkubes\' infrastructure. Main features: High scalability and reliability Integrated user management (OAUTH2; JWT; SAML)Complete microservice out of the box. MicroK’s features enable you to meet demanding user expectations, faster and with less risk.',
         title: 'About',
       },
-      
+
     ];
 
     return (
