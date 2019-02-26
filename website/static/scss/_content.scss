@@ -3,25 +3,12 @@ body {
 }
 
 .wrapper {
-  @include xl {
-    margin-left: $spacer / 5.5;
-  }
-  @include lg {
-    margin-left: $spacer / 5;
-  }
-  @include md {
-    margin-left: 0;
-  }
   .gridBlock {
     .threeByGridBlock {
       flex: 1 0 30%;
+      margin: $spacer / 8;
       @include md {
-        flex: 1 0 55%;
-      }
-
-      margin: 0 $spacer / 5 $spacer / 5 0;
-      @include md {
-        margin: 0 0 $spacer / 5 0;
+        flex: 1 0 55%; // margin: 0 0 $spacer / 5 0;
       }
       background-color: $white;
       padding: $spacer / 2 $spacer / 3;
@@ -31,17 +18,18 @@ body {
   }
 }
 
-.blockElement.alignCenter.imageAlignTop.threeByGridBlock
-  .blockContent
-  h2
-  > div
-  > span
-  > p {
+.blockElement.alignCenter.imageAlignTop.threeByGridBlock .blockContent h2>div>span>p {
   text-align: center;
 }
-.blockContent p {
-  hyphens: auto;
-  text-align: justify;
+
+.blockContent {
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    hyphens: auto;
+    text-align: justify;
+  }
 }
 
 .fourByGridBlock {
@@ -52,9 +40,11 @@ body {
   padding-bottom: $spacer - 6;
   padding-top: $spacer - 6;
 }
+
 .downloadSection {
   background-color: $bg-light;
 }
+
 .productShowcaseSection p {
   margin: 0 auto;
   max-width: 900px;
@@ -74,21 +64,31 @@ small {
 
 .mainContainer {
   padding: 0;
-  .wrapper .post .postHeader {
-    padding-top: $spacer / 5;
+  .wrapper {
+    .post {
+      .postHeader {
+        margin: $spacer / 8 0;
+      }
+    }
   }
 }
 
 .imageAlignTop .blockImage {
   max-width: 100px;
 }
+
 .toc .toggleNav ul li a {
   font-size: inherit;
 }
+
 .section-title {
   color: $primary-color;
   letter-spacing: 0.7px;
   font-size: 2.5rem;
   font-weight: 700;
   margin-top: $spacer - 9;
+}
+
+.contact-form {
+  margin: $spacer/8;
 }
