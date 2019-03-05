@@ -3,12 +3,12 @@ id: configuration
 title: Configuration
 ---
 
-Each microservice on the platorm hat it own config file. It resides in the root of the service.
-In different deployment systems ([Docker Swarm](https://docs.docker.com/engine/swarm/)/[Kubernetes](https://kubernetes.io/)) it is mounted under some volume path. The default path of the configuration file is `/run/secrets/microservice-name_config.json`. To change the path set the SERVICE_CONFIG_FILE enviroment variable.
+Each microservice on the platorm has its own config file. It resides in the root directory of the service.
+In different deployment systems ([Docker Swarm](https://docs.docker.com/engine/swarm/)/[Kubernetes](https://kubernetes.io/)) it is mounted under some volume path. The default path of the configuration file is `/run/secrets/microservice-name_config.json`. To change the path set the SERVICE_CONFIG_FILE environment variable.
 
-The format of the configuration file is `JSON`. It is easy to manage the configuration and extend as need is growing.
+The format of the configuration file is `JSON`. It is easy to manage and extend the configuration.
 
-Micrkubes has its own [package](https://github.com/Microkubes/microservice-tools/tree/master/config) for managing the configuration files. It is able to load the remote and local config as well. It holds the full microservice configuration:
+Microkubes has its own [package](https://github.com/Microkubes/microservice-tools/tree/master/config) for managing the configuration files. It is able to load the remote and local config as well. It holds the full microservice configuration:
 
 * Configuration for registering on the API Gateway
 * Security configuration
@@ -17,5 +17,4 @@ Micrkubes has its own [package](https://github.com/Microkubes/microservice-tools
 * API Admin Gateway URL
 * Container Manager
 
-
-**Note:** You are able to add new property to the configuration by extending it.
+**Note:** You can add new properties to the configuration by extending it.

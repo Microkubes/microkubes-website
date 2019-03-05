@@ -16,11 +16,13 @@ You need Docker and Kubernetes running on your machine.
 
 If you don't have Docker installed on your machine please follow these instructions [Docker Installation](https://docs.docker.com/install/).
 
-If you don't have Kubernetes installed on you machine the easiest way to have Kubernetes running on your machine is installing Minikube version from Kubernetes following this [Minikube Install](https://kubernetes.io/docs/tasks/tools/install-minikube/) guide.
+The easiest way to have Kubernetes running on your machine is by installing Minikube version from Kubernetes following this [Minikube Install](https://kubernetes.io/docs/tasks/tools/install-minikube/) guide.
+
+Minikube is not recommended for production use. For an example production ready cluster see [Set up Kubernetes cluster on AWS EKS with DynamoDB](AWS-EKS.md) or [Set up Google Kubernetes Engine cluster](GCP.md).
 
 ## Start Microkubes
 
-Microkubes is an open source framework for building data management platforms using microservices. For deploying this framework you to clone [this](https://github.com/microkubes/microkubes) repository on your local machine:
+Microkubes is an open source framework for building data management platforms using microservices. For deploying this framework you have to clone [this](https://github.com/microkubes/microkubes) repository on your local machine:
 
 ```bash
 git clone https://github.com/microkubes/microkubes
@@ -34,6 +36,8 @@ cd microkubes
 ```bash
 minikube start
 ```
+
+**Note:** If you use an existing cluster or prefer production ready cluster such as [GCP kubernetes cluster](GCP.md), then skip this command.
 
 2. Create keys for authorization servers:
 
@@ -70,8 +74,9 @@ kubectl -n microkubes create secret generic mongo-init-db \
 ```
 
 ### Deploy Microkubes
-your first microservice
-Run the following commands:
+
+To create your first microservice, run the following commands:
+
 ```bash
 cd kubernetes/manifests
 kubectl create -f consul.yaml
@@ -83,12 +88,13 @@ kubectl create -f fakesmtp.yaml
 kubectl create -f microkubes.yaml
 ```
 
-The platform takes about 5 minutes to bring up and you can follow the progress using `kubectl -n microkubes get pods -w`.
+The platform takes about 5 minutes to start. You can follow the progress with `kubectl -n microkubes get pods -w`.
 Once all services are running, you can start using microkubes.
 
 ### Check that microkubes is up and running
 
-The API gateway is exposed as a nodePort in kubernetes, you can get the URL and do an http GET request to check that microkubes is responding.
+The API gateway is exposed as a nodePort in kubernetes. You can get the URL and perform an http GET request to check if microkubes is responding.
+
 ```bash
 MICROKUBES_URL=`minikube service -n microkubes kong --url`
 curl $MICROKUBES_URL/users
@@ -112,7 +118,6 @@ The service will contain:
 * ```service.py``` - the Flask implementation
 * ```Dockerfile``` - to build the docker image for our service
 * ```service.yml``` - Kubernetes deployment for our service
-
 
 ## Service implementation with Flask
 
@@ -233,13 +238,13 @@ kubectl create -f service.yaml
 
 Wait for the service to start up (this could take a couple of seconds), then try calling the service:
 
-```
+```bash
 MICROKUBES_URL=`minikube service -n microkubes kong --url`
 curl $MICROKUBES_URL/hello
 ```
 
 You should see the service response:
 
-```
+```bash
 Hello from Flask service on Microkubes
 ```
