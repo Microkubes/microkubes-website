@@ -84,7 +84,7 @@ The service loads the configuration from a JSON file. Here's an example of a JSO
     "database":{
         "dbName": "dynamodb",
         "dbInfo": {
-        "credentials": "/run/secrets/aws-credentials",
+        "credentials": "/run/secrets/microkubes/aws-credentials",
         "endpoint": "http://dynamo:8000",
         "awsRegion": "us-east-1",
         "host": "mongo:27017",
@@ -97,12 +97,13 @@ The service loads the configuration from a JSON file. Here's an example of a JSO
 ```
 
 Configuration properties:
- * **dbName** - ```"dynamodb/mongodb"``` - is the name of the database( it can be mongodb/dynamodb ).
- * **dbInfo** - holds informations about each database.
- * **credentials** - ```"/run/secrets/aws-credentials"``` - is the full the to the AWS credentials file.
- * **endpoint** - ```"http://dynamo:8000"``` - is the dynamoDB endpoint. Format http://host:port
- * **awsRegion** - ```us-east-1``` - is the AWS region.
- * **host** - ```mongo:27017``` - mongoDB endpoint. Format host:port.
- * **database** - ```db-name``` - database name. Use only for mongoDB.
- * **user** - mongo database user
- * **pass** - mongo database password
+
+* **dbName** - ```"dynamodb/mongodb"``` - is the name of the database( it can be mongodb/dynamodb ).
+* **dbInfo** - holds informations about each database.
+* **credentials** - ```"/run/secrets/microkubes/aws-credentials"``` - is the full the to the AWS credentials file.
+* **endpoint** - ```"http://dynamo:8000"``` - is the dynamoDB endpoint. Format <http://host:port>
+* **awsRegion** - ```us-east-1``` - is the AWS region.
+* **host** - ```mongo:27017``` - mongoDB endpoint. Format host:port.
+* **database** - ```db-name``` - database name. Use only for mongoDB.
+* **user** - mongo database user
+* **pass** - mongo database password

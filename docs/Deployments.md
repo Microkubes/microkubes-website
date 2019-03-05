@@ -179,14 +179,15 @@ CMD ["/microservice-name"]
 
 # Microkubes Helm Chart
 
+[Microkubes](https://github.com/Microkubes/microkubes) offers a simple way for deployment on kubernetes using helm charts.
 This directory contains a helm chart for deploying [Microkubes](https://github.com/Microkubes/microkubes) on a kubernetes cluster.
 The helm chart implements all the relevant configuration parameters that can be configured through  a [value file](https://github.com/Microkubes/microkubes/blob/helm/kubernetes/helm/microkubes/values.yaml) or directly on command line. Also the helm chart supports deploying using an ingress to kubernetes clusters that have a configured ingress controller.
 
 ## Prerequisites Details
 
-* Kubernetes 1.9
-* Install [Helm](https://github.com/helm/helm/releases)
-* Make sure that you have helm tiller running in your cluster, if not run `helm init`
+* Kubernetes
+* [Helm](https://github.com/helm/helm/releases)
+    * Make sure that you have helm tiller running in your cluster, if not run `helm init`
 * Set up kubectl and kubeconfig correctly before running helm.
 
 ## Deploy Microkubes on kubernetes cluster
