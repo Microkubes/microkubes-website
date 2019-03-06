@@ -23,7 +23,7 @@ These instructions will let you deploy the Microkubes on Kubernetes.
 minikube start
 ```
 
-**Note:** Minikube is not recommended for production use. If you have an existing cluster or prefer production ready cluster such as [GCP kubernetes cluster](GCP.md), skip this command.
+**Note:** Minikube is not recommended for production use. If you have an existing cluster or prefer production ready cluster such as [GCP GKE](GCP.md) or [AWS EKS](AWS-EKS.md), skip this command and look at those documents instead.
 
 2. Create keys for authorization servers:
 
@@ -85,8 +85,6 @@ The API gateway is exposed as a nodePort in kubernetes. You can get the URL and 
 MICROKUBES_URL=`minikube service -n microkubes kong --url`
 curl $MICROKUBES_URL/users
 ```
-
-[Helm chart](https://github.com/helm/charts) will be available very soon.
 
 ## Docker Swarm
 
