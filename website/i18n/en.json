@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Scalable, Ready For Use Microservice Framework",
     "docs": {
+      "setup-aws-eks-cluster": {
+        "title": "Set up Kubernetes cluster on AWS EKS"
+      },
       "backends": {
         "title": "Backends"
       },
@@ -19,6 +22,9 @@
       },
       "external-services": {
         "title": "External Services"
+      },
+      "setup-gcp-cluster": {
+        "title": "Set up Google Kubernetes Engine cluster"
       },
       "installation": {
         "title": "Installation"
