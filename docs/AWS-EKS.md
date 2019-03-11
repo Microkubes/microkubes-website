@@ -1,9 +1,9 @@
 ---
-id: setup-aws-eks-cluster
-title: Set up Kubernetes cluster on AWS EKS
+id: aws-eks
+title: AWS with DynamoDB
 ---
 
-The [Deployments guide](Deployments.md) uses minikube kubernetes cluster which is recommended only for learning and test purposes. Below are instructions for creating production ready kubernetes cluster on AWS using Amazon's managed kubernetes offering (AWS EKS) and DynamoDB backend.
+Minikube kubernetes cluster is recommended only for learning and test purposes. Below are instructions for creating production ready kubernetes cluster on AWS using Amazon's managed kubernetes offering (AWS EKS) and DynamoDB backend.
 
 For more details about EKS please visit [Getting Started with Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 
@@ -15,9 +15,8 @@ We will use [eksctl](https://eksctl.io/) tool for a simple kubernetes setup on E
 
 ## Prerequisites
 
-- Amazon AWS account
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
-- [Amazon EKS-vended kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+- [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 - [eksctl](https://eksctl.io/)
 
 To install the latest version of eksctl locally:

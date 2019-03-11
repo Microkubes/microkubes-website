@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Scalable, Ready For Use Microservice Framework",
     "docs": {
+      "aws-eks": {
+        "title": "AWS with DynamoDB"
+      },
       "backends": {
         "title": "Backends"
       },
@@ -19,6 +22,9 @@
       },
       "external-services": {
         "title": "External Services"
+      },
+      "gcp": {
+        "title": "GCP"
       },
       "installation": {
         "title": "Installation"

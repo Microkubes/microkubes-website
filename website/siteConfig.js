@@ -22,6 +22,8 @@ const siteConfig = {
   ogImage: 'img/microkubes-post-photo.png',
   headerLinks: [
     {
+      doc: "gcp",
+      doc: "aws-eks",
       doc: "ci-cd",
       doc: "deployments",
       doc: "backends",

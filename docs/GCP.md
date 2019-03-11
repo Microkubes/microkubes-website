@@ -1,9 +1,9 @@
 ---
-id: setup-gcp-cluster
-title: Set up Google Kubernetes Engine cluster
+id: gcp
+title: GCP
 ---
 
-The [installation and setup guide](Introduction-InstallationAndSetup.md) uses minikube kubernetes cluster which is recommended only for learning and test purposes. Below are instructions for creating production ready kubernetes cluster on Google Cloud Platform.
+Minikube kubernetes cluster is recommended only for learning and test purposes. Below are instructions for creating production ready kubernetes cluster on Google Cloud Platform. Here, we are only going to create a GCP GKE cluster - the rest is the same as the official installation documentation, just make sure you skip the minikube start command.
 
 # Set up Kubernetes cluster on GCP GKE
 
@@ -43,4 +43,4 @@ All clusters have a canonical endpoint. The endpoint is the IP address of the Ku
 gcloud container clusters get-credentials [CLUSTER_NAME] [--zone=[COMPUTE_ZONE]] [--region=[COMPUTE_REGION]] [--project=[PROJECT_ID]]
 ```
 
-Once you have a working cluster and kubectl is able to connect to it, you can continue following the [installation and setup guide](Introduction-InstallationAndSetup.md), just be sure you skip the `minikube start` command.
+Once you have a working cluster and kubectl is able to connect to it, you can continue following the [installation and setup guide](Introduction-InstallationAndSetup.md) from the section Preparing step 2, just be sure you skip the `minikube start` command.

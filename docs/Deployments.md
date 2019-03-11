@@ -23,7 +23,10 @@ These instructions will let you deploy the Microkubes on Kubernetes.
 minikube start
 ```
 
-**Note:** Minikube is not recommended for production use. If you have an existing cluster or prefer production ready cluster such as [GCP GKE](GCP.md) or [AWS EKS](AWS-EKS.md), skip this command and look at those documents instead.
+**Note:** Minikube is not recommended for production use. For a production ready cluster, please skip this command and follow the instructions at:
+
+- [Set up microkubes on AWS EKS with DynamoDB](AWS-EKS.md) or
+- [Set up microkubes on GCP GKE](GCP.md).
 
 2. Create keys for authorization servers:
 

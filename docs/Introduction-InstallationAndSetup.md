@@ -18,8 +18,6 @@ If you don't have Docker installed on your machine please follow these instructi
 
 The easiest way to have Kubernetes running on your machine is by installing Minikube version from Kubernetes following this [Minikube Install](https://kubernetes.io/docs/tasks/tools/install-minikube/) guide.
 
-Minikube is not recommended for production use. For an example production ready cluster see [Set up Kubernetes cluster on AWS EKS with DynamoDB](AWS-EKS.md) or [Set up Google Kubernetes Engine cluster](GCP.md).
-
 ## Start Microkubes
 
 Microkubes is an open source framework for building data management platforms using microservices. For deploying this framework you have to clone [this](https://github.com/microkubes/microkubes) repository on your local machine:
@@ -31,13 +29,18 @@ cd microkubes
 
 ### Preparing
 
+We present a simple microkubes setup using minikube and mongodb for backend.
+
 1. Run a single-node Kubernetes cluster via Minikube tool
 
 ```bash
 minikube start
 ```
 
-**Note:** If you use an existing cluster or prefer production ready cluster such as [GCP kubernetes cluster](GCP.md), then skip this command.
+**Note:** Minikube is not recommended for production use. For a production ready cluster, please skip this command and follow the instructions at:
+
+- [Set up microkubes on AWS EKS with DynamoDB](AWS-EKS.md) or
+- [Set up microkubes on GCP GKE](GCP.md).
 
 2. Create keys for authorization servers:
 
@@ -56,14 +59,14 @@ kubectl create -f kubernetes/manifests/serviceaccount.yaml
 
 ```bash
 kubectl -n microkubes create secret generic microkubes-secrets \
-	--from-file=keys/default \
-	--from-file=keys/default.pub \
-	--from-file=keys/private.pem \
-	--from-file=keys/public.pub \
-	--from-file=keys/service.cert \
-	--from-file=keys/service.key \
-	--from-file=keys/system \
-	--from-file=keys/system.pub
+  --from-file=keys/default \
+  --from-file=keys/default.pub \
+  --from-file=keys/private.pem \
+  --from-file=keys/public.pub \
+  --from-file=keys/service.cert \
+  --from-file=keys/service.key \
+  --from-file=keys/system \
+  --from-file=keys/system.pub
 ```
 
 5. Create a secret for the mongo objects creation

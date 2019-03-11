@@ -10,7 +10,9 @@
       "security",
       "backends",
       "deployments",
-      "ci-cd"
+      "ci-cd",
+      "aws-eks",
+      "gcp"
     ]
   }
 }
