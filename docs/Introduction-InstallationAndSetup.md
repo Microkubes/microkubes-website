@@ -39,20 +39,21 @@ minikube start
 
 **Note:** If you use an existing cluster or prefer production ready cluster such as [GCP kubernetes cluster](GCP.md), then skip this command.
 
-2. Create keys for authorization servers:
 
-```bash
-./keys/create.sh
-```
-
-3. Create a default microkubes namespace and service account
+2. Create a default microkubes namespace and service account
 
 ```bash
 kubectl create -f kubernetes/manifests/namespace.yaml
 kubectl create -f kubernetes/manifests/serviceaccount.yaml
 ```
 
-4. Create a secret from keys generated in Step 2
+3. Create keys for authorization servers:
+
+```bash
+./keys/create.sh
+```
+
+4. Create a secret from keys generated in the previous step
 
 ```bash
 kubectl -n microkubes create secret generic microkubes-secrets \
@@ -75,7 +76,14 @@ kubectl -n microkubes create secret generic mongo-init-db \
 
 ### Deploy Microkubes
 
-To create your first microservice, run the following commands:
+Before starting the framework, create the default `ConfigMap` for the microservices:
+
+```bash
+cd kubernetes/manifests
+kubectl create -f microkubes-configmap.yaml
+```
+
+To create your first microservice, run the following commands in the same directory:
 
 ```bash
 cd kubernetes/manifests
