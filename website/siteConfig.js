@@ -9,6 +9,10 @@
 const users = [];
 
 const siteConfig = {
+    algolia: {
+    apiKey: '84a612c2b93d457087aff69f653514e1',
+    indexName: 'microkubes',
+  },
   title: "Microkubes" /* title for your website */,
   tagline: "Scalable, Ready For Use Microservice Framework",
   url: "https://www.microkubes.com" /* your website url */,
